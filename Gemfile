@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+gem 'therubyracer', '~> 0.12.1'
 #encriptar contraseña
 gem 'bcrypt-ruby', '3.0.0'
 #WYSIWYG
