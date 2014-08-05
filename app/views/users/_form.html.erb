@@ -1,0 +1,52 @@
+<div class="container content">
+  <div class="row">
+    
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 reg-page">
+      <div class="reg-header">
+                        <h2>Register a new account</h2>
+                        <p>Already Signed Up? Click <%= link_to "Sign in", signin_path %>  to login your account.</p>                    
+                    </div>
+
+      <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :name, "Nombre" %>
+      <%= f.text_field :name, class: 'form-control margin-bottom-20', placeholder:"Nombre" %>
+      <%= f.label :email %>
+      <%= f.text_field :email, :autofocus => false, class: 'form-control margin-bottom-20', placeholder:"Email" %>
+      <%= f.label :password, " Contraseña" %>
+      <%= f.password_field :password, autocomplete: "off", :class => "form-control margin-bottom-20", placeholder:"Contraseña" %>
+      <%= f.label :password_confirmation, "Confirmar contraseña" %>
+      <%= f.password_field :password_confirmation, :class => "form-control margin-bottom-20" %></br></br>
+      <div class="col-lg-5 text-right">
+      
+        <% if params[:action] ==  "new" || params[:action] == "create"%>
+        <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+          
+      <%else%>
+
+      <%= f.submit "Save changes",  class: "btn btn-large btn-primary" %>
+
+      <%end%>
+      </div>
+      
+      <% end %>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
