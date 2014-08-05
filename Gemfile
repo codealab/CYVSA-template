@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
  gem 'pg'
+ gem 'carrierwave', '~> 0.10.0'
+ # gem 'rmagick', :require => "RMagick"
+ gem "mini_magick"
+ gem 'fog', '~> 1.23.0'
+ gem 'unf', '~> 0.1.4'
 
 
 gem 'therubyracer', '~> 0.12.1'
