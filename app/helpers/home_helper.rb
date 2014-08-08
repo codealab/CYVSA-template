@@ -8,7 +8,7 @@ module HomeHelper
 
   def slider
     slider_path ="/assets/1.png"
-    slider_path = Home.first.slider if Home.first
+    slider_path = Home.first.slider_image_one if Home.first
     slider_path
   end
 
@@ -23,20 +23,20 @@ module HomeHelper
     promo.html_safe
   end
 
-  def servicio(service)
-    servicio =  "<h3>Ponga su título aquí de servicio </h3> <p>Escriba acerca del servicio..</p> "
-    if Home.first
-      case service
-      when 1
-        servicio = Home.first.servicio1 if !Home.first.servicio1.blank?
-      when 2
-        servicio = Home.first.servicio2 if !Home.first.servicio2.blank?
-      when 3
-        servicio = Home.first.servicio3 if !Home.first.servicio3.blank?
-      end
-    end
-    servicio.html_safe
-  end
+  # def servicio(service)
+  #   servicio =  "<h3>Ponga su título aquí de servicio </h3> <p>Escriba acerca del servicio..</p> "
+  #   if Home.first
+  #     case service
+  #     when 1
+  #       servicio = Home.first.servicio1 if !Home.first.servicio1.blank?
+  #     when 2
+  #       servicio = Home.first.servicio2 if !Home.first.servicio2.blank?
+  #     when 3
+  #       servicio = Home.first.servicio3 if !Home.first.servicio3.blank?
+  #     end
+  #   end
+  #   servicio.html_safe
+  # end
 
 
 
@@ -54,13 +54,13 @@ module HomeHelper
   			texto = Home.first.about if !Home.first.about.blank?
   		
   		when "direccion"
-  			texto = Home.first.direccion if !Home.first.direccion.blank?
+  			texto = Home.first.address if !Home.first.address.blank?
 
   		when  "fax"
   			texto = Home.first.fax if !Home.first.fax.blank?
 
   		when "telefono"
-  			texto= Home.first.telefono if !Home.first.telefono.blank?
+  			texto= Home.first.telephone if !Home.first.telephone.blank?
 
   		when "email"
   			texto = Home.first.email if !Home.first.email.blank?
