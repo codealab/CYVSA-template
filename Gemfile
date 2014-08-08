@@ -5,7 +5,7 @@ ruby '2.0.0'
 
  gem 'pg'
  gem 'carrierwave', '~> 0.10.0'
- # gem 'rmagick', :require => "RMagick"
+ 
  gem "mini_magick"
  gem 'fog', '~> 1.23.0'
  gem 'unf', '~> 0.1.4'
@@ -56,6 +56,7 @@ end
 group :production do
   #gem 'pg'
   gem 'rails_12factor', '0.0.2'
+  gem 'rmagick', :require => "RMagick"
 end
 
 group :development do
