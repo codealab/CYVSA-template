@@ -1,42 +1,56 @@
-
- <%- model_class = Home -%>
+<%- model_class = Home -%>
 <div class="container content">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 reg-page">
-    <center>
-
-  
-
-
-
-	
-
-	<div class="reg-header">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 reg-page">
+			<center>
+			<dl class="dl-horizontal">
+				<dt><strong><%= model_class.human_attribute_name(:Logo) %>:</strong></dt>
+				<dd><%= image_tag @home.logo_url(:thumb).to_s %></dd></br>
+			</dl>
+			<div class="reg-header">
+			</div>
+			<dl class="dl-horizontal">
+				<dt><strong><%= model_class.human_attribute_name(:Slider_image_one) %>:</strong></dt>
+				<dd><%= image_tag @home.slider_image_one_url(:thumb).to_s %></dd></br>
+			</dl>
+			<div class="reg-header">
+			</div>
+			<dl class="dl-horizontal">
+				
+				<dt><strong><%= model_class.human_attribute_name(:Slider_image_two) %>:</strong></dt>
+				<dd><%= image_tag @home.slider_image_two_url(:thumb).to_s %></dd></br>
+			</dl>
+			<div class="reg-header">
+			</div>
+			<dl class="dl-horizontal">
+				
+				<dt><strong><%= model_class.human_attribute_name(:Slider_image_three) %>:</strong></dt>
+				<dd><%= image_tag @home.slider_image_three_url(:thumb).to_s %></dd></br>
+			</dl>
+			
+			<div class="reg-header">
+			</div>
+			<dl class="dl-horizontal">
+				
+				<dt><strong><%= model_class.human_attribute_name(:promocional) %>:</strong></dt>
+				<dd><%= @home.promocional %></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:about) %>:</strong></dt>
+				<dd><%= @home.about%></dd></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+				<dd><%= @home.address%></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:telephone) %>:</strong></dt>
+				<dd><%= @home.telephone%></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:fax) %>:</strong></dt>
+				<dd><%= @home.fax%></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+				<dd><%= @home.email%></dd>
+				
+			</dl>
+			
+			<p><%= link_to "Edit", edit_home_path(@home) %>
+			
+			
+			</center>
+		</div>
+	</div>
 </div>
-
-	<dl class="dl-horizontal">
-		
-		<dt><strong><%= model_class.human_attribute_name(:promocional) %>:</strong></dt>
-		<dd><%= @home.promocional %></dd></br>
-		<dt><strong><%= model_class.human_attribute_name(:about) %>:</strong></dt>
-		<dd><%= @home.about%></dd></dd></br>
-		<dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
-		<dd><%= @home.address%></dd></br>
-		<dt><strong><%= model_class.human_attribute_name(:telephone) %>:</strong></dt>
-		<dd><%= @home.telephone%></dd></br>
-		<dt><strong><%= model_class.human_attribute_name(:fax) %>:</strong></dt>
-		<dd><%= @home.fax%></dd></br>
-		<dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
-		<dd><%= @home.email%></dd>
-		
-	</dl>
- 
-      <p><%= link_to "edit", edit_home_path(@home) %> |
-   <%= link_to "remove", @home, :confirm => 'Are you sure?', :method => :delete %></p>
-     
-      </center>
-    </div>
-  </div>
-</div>
-
-
