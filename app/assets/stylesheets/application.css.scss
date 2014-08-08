@@ -7,7 +7,8 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *               
+ *
+ *= require bootstrap-wysihtml5           
  *= require_self
  *= require_tree .
  */
@@ -15,6 +16,25 @@
   @import "bootstrap";
   /*Import Google Font*/
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+  /*boton agregar archivos*/
+  .opacitycolor input {
+
+  opacity: 0;
+
+
+
+  }
+  .opacitycolor{
+    background: red;
+
+
+  }
+
+
+ 
+
+
 
 
  /* forms */

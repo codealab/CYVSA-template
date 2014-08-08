@@ -6,13 +6,15 @@ ruby '2.0.0'
  gem "mini_magick"
  gem 'fog', '~> 1.23.0'
  gem 'unf', '~> 0.1.4'
+ #Awesome print
+gem "awesome_print", "1.2.0"
 
 
 gem 'therubyracer', '~> 0.12.1'
 #encriptar contraseña
 gem 'bcrypt-ruby', '3.0.0'
 #WYSIWYG
-#gem 'bootstrap-wysihtml5-rails', '0.3.1.24'
+gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 #peperclip para suvir fotos
 #gem "paperclip", "~> 4.1"
 #divise
@@ -20,7 +22,9 @@ gem 'bcrypt-ruby', '3.0.0'
 #rails-admin
 #gem 'rails_admin', '~> 0.6.2'
 #bootstrap
-gem 'bootstrap-sass', '~> 3.1.0.0'
+#gem 'bootstrap-sass', '~> 3.1.0.0'
+gem 'bootstrap-sass', '~> 3.2.0'
+
 gem 'sprockets', '~> 2.11.0'
 
 
@@ -49,4 +53,8 @@ end
 group :production do
   #gem 'pg'
   gem 'rails_12factor', '0.0.2'
+end
+
+group :development do
+  gem "better_errors"
 end

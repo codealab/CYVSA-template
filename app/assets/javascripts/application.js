@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-wysihtml5
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
@@ -23,6 +24,11 @@
  * Author: @htmlstream
  * Website: http://htmlstream.com
 */
+$(function() {
+    $(document).on('page:load', function(){
+  window['rangy'].initialized = false
+})
+});
 
 var App = function () {
 
@@ -167,7 +173,12 @@ var App = function () {
             handleSwitcher();
             handleBoxed();
             handleHeader();
+
+            
+    $('.wysihtml5').wysihtml5();
+        
         },
+
 
         initSliders: function () {
             jQuery('#clients-flexslider').flexslider({
@@ -272,4 +283,12 @@ var App = function () {
 
     };
 
+
 }();
+
+
+
+    
+
+    
+      
