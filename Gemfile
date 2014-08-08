@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-	#s3
-	gem 'aws-sdk'
+	
+	
 
  gem 'pg'
  gem 'carrierwave', '~> 0.10.0'
