@@ -26,7 +26,7 @@ class HomesController < ApplicationController
     @home = Home.find(params[:id])
     if @home.update_attributes(home_params)
       flash[:success]= "image updated"
-      redirect_to @home
+      render 'edit'
       
     else
       render 'edit'

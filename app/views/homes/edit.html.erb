@@ -51,7 +51,7 @@
 			<dl class="dl-horizontal">
 				
 				<dt><strong><%= model_class.human_attribute_name(:Logo) %>:</strong></dt>
-				<!-- <dd><%= image_tag @home.logo_url(:thumb).to_s %></dd></br> -->
+				<dd><%= image_tag @home.logo_url(:thumb).to_s %></dd></br> 
 				<!-- Button trigger modal -->
 				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#myModal" value="change logo" type="button">
 				</dd></br></br>
@@ -65,14 +65,16 @@
 								<h4 class="modal-title" id="myModalLabel">change logo</h4>
 							</div>
 							<div class="modal-body">
-								<%= form_for @home, :html => {:multipart => true} do |f| %>
 								
-								<%= image_tag @home.logo_url(:thumb).to_s %></br></br>
+								
+								<%= image_tag @home.logo_url(:thumb).to_s, id: "image_url" %></br></br>
 								<div class="button">
 									<div class="text">
 										Selecciona un archivo
 									</div>
-									<%= f.file_field :logo %>
+									<%= f.file_field :logo  %>
+									
+
 								</div>
 								
 								
@@ -84,7 +86,7 @@
 								<%= f.button "Upload",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
 								
 							</div>
-							<% end %>
+							
 						</div>
 					</div>
 				</div>
@@ -93,7 +95,7 @@
 				</div>
 				
 				<dt><strong><%= model_class.human_attribute_name(:Slider_image_one) %>:</strong></dt>
-				<!-- <dd><%= image_tag @home.slider_image_one_url(:thumb).to_s %></dd></br> -->
+				 <dd><%= image_tag @home.slider_image_one_url(:thumb).to_s %></dd></br> 
 				<!-- Button trigger modal  slider one -->
 				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_one" value="change slider one" type="button">
 				</dd></br></br>
@@ -107,7 +109,7 @@
 								<h4 class="modal-title" id="myModalLabel">Edit slider one </h4>
 							</div>
 							<div class="modal-body">
-								<%= form_for @home, :html => {:multipart => true} do |f| %>
+								
 								<%= image_tag @home.slider_image_one_url(:thumb).to_s %></br></br>
 								<div class="button">
 									<div class="text">
@@ -136,7 +138,7 @@
 								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Close</button>
 								<%= f.button "Upload",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
 							</div>
-							<% end %>
+							
 						</div>
 					</div>
 				</div>
@@ -152,9 +154,9 @@
 			<dl class="dl-horizontal">
 				
 				<dt><strong><%= model_class.human_attribute_name(:Slider_image_two) %>:</strong></dt>
-				<!-- <dd><%= image_tag @home.slider_image_two_url(:thumb).to_s %></dd></br> -->
+				<dd><%= image_tag @home.slider_image_two_url(:thumb).to_s %></dd></br> 
 				<!-- Button trigger modal  slider two-->
-				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_two" value="change slider one" type="button">
+				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_two" value="change slider two" type="button">
 				</dd></br></br>
 				<!-- end Button trigger modal  slider two-->
 				<!-- Modal slider two -->
@@ -166,7 +168,7 @@
 								<h4 class="modal-title" id="myModalLabel">Edit slider two</h4>
 							</div>
 							<div class="modal-body">
-								<%= form_for @home, :html => {:multipart => true} do |f| %>
+								
 								<%= image_tag @home.slider_image_two_url(:thumb).to_s %></br></br>
 								<div class="button">
 									<div class="text">
@@ -195,7 +197,7 @@
 								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Close</button>
 								<%= f.button "Upload",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
 							</div>
-							<% end %>
+							
 						</div>
 					</div>
 				</div>
@@ -212,10 +214,11 @@
 			<dl class="dl-horizontal">
 				
 				<dt><strong><%= model_class.human_attribute_name(:Slider_image_three) %>:</strong></dt>
-				<!--<dd><%= image_tag @home.slider_image_three_url(:thumb).to_s %></dd></br>
-				-->
+				<dd><%= image_tag @home.slider_image_three_url(:thumb).to_s %></dd></br>
+				
 				<!-- Button trigger modal  slider three-->
-				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_three" value="change slider one" type="button">
+				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_three" value="change slider three" type="button">
+
 				</dd></br></br>
 				<!-- end Button trigger modal  slider three-->
 				<!-- Modal slider three -->
@@ -227,14 +230,20 @@
 								<h4 class="modal-title" id="myModalLabel">Edit slider three</h4>
 							</div>
 							<div class="modal-body">
-								<%= form_for @home, :html => {:multipart => true} do |f| %>
+								
 								<%= image_tag @home.slider_image_three_url(:thumb).to_s %></br></br>
-								<div class="button">
+							  <div class="button">
 									<div class="text">
 										Selecciona un archivo
+
 									</div>
+
 									<%= f.file_field :slider_image_three %>
-								</div></br></br>
+								</div> 
+								
+
+
+								</br></br>
 								
 								<div class="control-group">
 									<%= f.label :slider_title_three, :class => 'control-label' %>
@@ -256,7 +265,7 @@
 								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Close</button>
 								<%= f.button "Upload",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
 							</div>
-							<% end %>
+							
 						</div>
 					</div>
 				</div>

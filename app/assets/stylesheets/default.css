@@ -1,39 +1,39 @@
 f/* 
 * Version: 1.4
-* Default Color 	  : #72c02c;
+* Default Color 	  : #428bca;
 * Default Hover Color : #5fb611;
 */
 
 a:focus, 
 a:hover, 
 a:active {
-	color: #72c02c;
+	color: #428bca;
 }
 
 .color-green {
-	color: #72c02c;
+	color: #428bca;
 }
 
 a.read-more:hover { 
-	color:#72c02c; 
+	color:#428bca; 
 }
 
 .linked:hover {
-	color:#72c02c;
+	color:#428bca;
 }
 
 /*Header v1
 ------------------------------------*/
 /*Navber*/
 .header .navbar-default .navbar-nav > .active > a {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Navbar Toggle*/
 .navbar-toggle,
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
-	background: #72c02c;
+	background: #428bca;
 }
 
 .navbar-toggle:hover {
@@ -47,13 +47,13 @@ a.read-more:hover {
 /*Responsive Navbar*/
 @media (max-width: 767px) {
 	.header .navbar-default .navbar-nav > li > a:hover {
-		color: #72c02c;
+		color: #428bca;
 	}
 
 	.header .navbar-default .navbar-nav > .active > a,
 	.header .navbar-default .navbar-nav > .active > a:hover,
 	.header .navbar-default .navbar-nav > .active > a:focus {
-		background: #72c02c;
+		background: #428bca;
 	}
 }
 
@@ -61,25 +61,25 @@ a.read-more:hover {
 	/*Navbar*/
 	.header .navbar-default .navbar-nav > li > a:hover,
 	.header .navbar-default .navbar-nav > .active > a {
-		/*border-bottom: solid 2px #72c02c;*/
+		/*border-bottom: solid 2px #428bca;*/
 	}
 
 	.header .navbar-default .navbar-nav > .open > a,
 	.header .navbar-default .navbar-nav > .open > a:hover,
 	.header .navbar-default .navbar-nav > .open > a:focus {
-		color: #72c02c;
+		color: #428bca;
 	}
 
 	/*Dropdown Menu*/
 	.header .dropdown-menu { 
-		border-top: solid 2px #72c02c; 
+		border-top: solid 2px #428bca; 
 	}	
 }
 
 /*Search Box*/
 .header .navbar .nav > li > .search:hover {
-	color: #72c02c;
-	border-bottom-color: #72c02c;
+	color: #428bca;
+	border-bottom-color: #428bca;
 }
 
 @media (max-width: 767px) {
@@ -92,12 +92,12 @@ a.read-more:hover {
 ------------------------------------*/
 /*Topbar*/
 .topbar-v1 .top-v1-data li a:hover i {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Search Box*/
 .header-v1 .navbar .nav > li > .search:hover {
-	background: #72c02c;
+	background: #428bca;
 }
 
 /*Responsive Navbar*/
@@ -105,13 +105,13 @@ a.read-more:hover {
 	.header-v1 .navbar-default .navbar-nav > li > a:hover,
 	.header-v1 .navbar-default .navbar-nav > .active > a {
 		color: #fff;
-		background: #72c02c !important;
+		background: #428bca !important;
 	}
 
 	.header-v1 .navbar-default .navbar-nav > .open > a,
 	.header-v1 .navbar-default .navbar-nav > .open > a:hover,
 	.header-v1 .navbar-default .navbar-nav > .open > a:focus {
-		background: #72c02c;		
+		background: #428bca;		
 	}
 }	
 
@@ -119,7 +119,7 @@ a.read-more:hover {
 ------------------------------------*/
 /*Main Parallax Sldier*/
 .da-slide h2 i {
-	background:url(/assets/bg-heading.png) repeat;
+	background:url(/assets/bg-heading-blue.png) repeat;
 }
 
 /*Sequence Parallax Sldier*/
@@ -143,7 +143,7 @@ a.read-more:hover {
 /*Buttons
 ------------------------------------*/
 .btn-u {
-	background: #72c02c;
+	background: #428bca;
 }
 
 .btn-u:hover {
@@ -153,22 +153,22 @@ a.read-more:hover {
 /*Service
 ------------------------------------*/
 .service .service-icon {
-	color:#72c02c;	
+	color:#428bca;	
 }
 
 /*Service Blocks*/
 .service-alternative .service:hover { 
-	background:#72c02c;
+	background:#428bca;
 } 
 
 /*Thumbnail (Recent Work)
 ------------------------------------*/
 .thumbnail-style h3 a:hover {
-	color:#72c02c;
+	color:#428bca;
 }
 
 .thumbnail-style a.btn-more {
-	background:#72c02c;
+	background:#428bca;
 }
 .thumbnail-style a.btn-more:hover {
 	box-shadow:0 0 0 2px #5fb611;
@@ -176,7 +176,7 @@ a.read-more:hover {
 
 /*Carousel (Recent Work)*/
 .recent-work a:hover span {
-	border-bottom:solid 2px #72c02c;
+	border-bottom:solid 2px #428bca;
 }
 
 .bx-wrapper .bx-prev {
@@ -192,22 +192,22 @@ a.read-more:hover {
 .headline h2, 
 .headline h3, 
 .headline h4 {
-	border-bottom:2px solid #72c02c;
+	border-bottom:2px solid #428bca;
 }
 
 /*Blockquote*/
 blockquote:hover {
-	border-left-color:#72c02c; 
+	border-left-color:#428bca; 
 }
 
 .hero {
-	border-left-color: #72c02c;
+	border-left-color: #428bca;
 }
 
 /*Carousel
 ------------------------------------*/
 .carousel-arrow a.carousel-control:hover {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Footer
@@ -216,59 +216,59 @@ blockquote:hover {
 .copyright a,
 .footer a:hover,
 .copyright a:hover {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Footer Blog*/
 .footer .dl-horizontal a:hover {
-	color:#72c02c !important;
+	color:#428bca !important;
 }
 
 /*Blog Posts
 ------------------------------------*/
 .posts .dl-horizontal a:hover { 
-	color:#72c02c; 
+	color:#428bca; 
 }
 
 .posts .dl-horizontal:hover dt img,
 .posts .dl-horizontal:hover dd a { 
-	color: #72c02c;
-	border-color: #72c02c !important;
+	color: #428bca;
+	border-color: #428bca !important;
 }
 
 /*Post Comment*/
 .post-comment h3, 
 .blog-item .media h3,
 .blog-item .media h4.media-heading span a {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Tabs
 ------------------------------------*/
 /*Tabs v1*/
 .tab-v1 .nav-tabs { 
-	border-bottom: solid 2px #72c02c; 	
+	border-bottom: solid 2px #428bca; 	
 }
 
 .tab-v1 .nav-tabs > .active > a, 
 .tab-v1 .nav-tabs > .active > a:hover, 
 .tab-v1 .nav-tabs > .active > a:focus { 
-	background: #72c02c; 
+	background: #428bca; 
 }
 
 .tab-v1 .nav-tabs > li > a:hover { 
-	background: #72c02c; 
+	background: #428bca; 
 }
 
 /*Tabs v2*/
 .tab-v2 .nav-tabs li.active a {
-	border-top: solid 2px #72c02c;
+	border-top: solid 2px #428bca;
 }
 
 /*Tabs v3*/
 .tab-v3 .nav-pills li a:hover,
 .tab-v3 .nav-pills li.active a {
-	background: #72c02c;
+	background: #428bca;
 	border: solid 1px #5fb611;
 }
 
@@ -276,44 +276,44 @@ blockquote:hover {
 ------------------------------------*/
 .acc-home a.active,
 .acc-home a.accordion-toggle:hover { 
-	color:#72c02c; 
+	color:#428bca; 
 }
 .acc-home .collapse.in { 
-	border-bottom:solid 1px #72c02c; 
+	border-bottom:solid 1px #428bca; 
 }
 
 /*Testimonials
 ------------------------------------*/
 .testimonials .testimonial-info {
-	color: #72c02c;
+	color: #428bca;
 }
 
 .testimonials .carousel-arrow i:hover {
-	background: #72c02c;
+	background: #428bca;
 }
 
 /*Info Blocks
 ------------------------------------*/
 .info-blocks:hover i.icon-info-blocks {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Breadcrumb
 ------------------------------------*/
 .breadcrumb li.active,
 .breadcrumb li a:hover {
-	color:#72c02c;
+	color:#428bca;
 }
 
 /*About Page
 ------------------------------------*/
 .team .thumbnail-style:hover h3 a {
-	color:#72c02c !important;
+	color:#428bca !important;
 }
 
 /*Social Icons*/
 .team ul.team-socail li i:hover {
-	background: #72c02c;
+	background: #428bca;
 }
 
 /*Pricing Page
@@ -338,13 +338,13 @@ blockquote:hover {
 	border-bottom:solid 1px #f5f9e7;
 }
 .pricing-content li i {
-	color:#72c02c;
+	color:#428bca;
 }
 
 /*Pricing Footer*/
 .pricing-footer a,
 .pricing-footer button {
-	background:#72c02c;
+	background:#428bca;
 }
 .pricing-footer a:hover,
 .pricing-footer button:hover {
@@ -367,95 +367,95 @@ blockquote:hover {
 .who li i,
 .who li:hover i, 
 .who li:hover a { 
-	color:#72c02c; 
+	color:#428bca; 
 }
 
 /*Privacy Page
 ------------------------------------*/
 .privacy a:hover {
-	color:#72c02c; 
+	color:#428bca; 
 }
 
 /*Portfolio Page
 ------------------------------------*/
 /*Portfolio v1*/
 .view a.info:hover {
-	background: #72c02c;
+	background: #428bca;
 }
 
 /*Portfolio v2*/
 .sorting-block .sorting-nav li.active {
-	color: #72c02c;
-	border-bottom: solid 1px #72c02c;
+	color: #428bca;
+	border-bottom: solid 1px #428bca;
 }
 
 .sorting-block .sorting-grid li a:hover span.sorting-cover {
-	background: #72c02c;
+	background: #428bca;
 }
 
 /*Blog Page
 ------------------------------------*/
 .blog h3 {
-	color:#72c02c;
+	color:#428bca;
 }
 .blog li a:hover {
-	color:#72c02c;
+	color:#428bca;
 }
 
 /*Blog Tags*/
 ul.blog-tags a:hover {
-	background: #72c02c;
+	background: #428bca;
 }
 
 .blog-post-tags ul.blog-tags a:hover {
-    background: none repeat scroll 0 0 #72c02c;
+    background: none repeat scroll 0 0 #428bca;
 }
 
 /*Blog Photos*/
 .blog-photos li img:hover {
-	box-shadow: 0 0 0 2px #72c02c;
+	box-shadow: 0 0 0 2px #428bca;
 }
 
 /*Blog Latest Tweets*/
 .blog-twitter .blog-twitter-inner:hover {
-	border-color: #72c02c;
-	border-top-color: #72c02c;	
+	border-color: #428bca;
+	border-top-color: #428bca;	
 }
 .blog-twitter .blog-twitter-inner:hover:after {
-	border-top-color: #72c02c;	
+	border-top-color: #428bca;	
 }
 
 .blog-twitter .blog-twitter-inner a {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Blog Item Page
 ------------------------------------*/
 .blog-item h4.media-heading span a {
-	color:#72c02c;
+	color:#428bca;
 }
 
 /*Coming Soon Page
 ------------------------------------*/
 .coming-soon-border {
-	border-top: solid 3px #72c02c;
+	border-top: solid 3px #428bca;
 }
 
 /*Search Page
 ------------------------------------*/
 .booking-blocks p a {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Icons Page
 ------------------------------------*/
 .icon-page li:hover { 
-	color:#72c02c;
+	color:#428bca;
 }
 
 /*Glyphicons*/
 .glyphicons-demo a:hover {
-	color: #72c02c;
+	color: #428bca;
 	text-decoration: none;
 }
 
@@ -463,56 +463,56 @@ ul.blog-tags a:hover {
 ------------------------------------*/
 /*Magazine News*/
 .magazine-news .by-author strong {
-	color: #72c02c;
+	color: #428bca;
 }
 
 .magazine-news a.read-more {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Magazine Mini News*/
 .magazine-mini-news .post-author strong {
-	color: #72c02c;
+	color: #428bca;
 }
 
 .news-read-more i {
-	background: #72c02c;
+	background: #428bca;
 }
 
 /*Sidebar Features*/
 .magazine-page h3 a:hover {
-	color: #72c02c;
+	color: #428bca;
 }
 
 /*Page Features
 ------------------------------------*/
 /*Tag Boxes v1*/
 .tag-box-v1 {
-	border-top: solid 2px #72c02c;
+	border-top: solid 2px #428bca;
 }
 
 /*Tag Boxes v2*/
 .tag-box-v2 {
-	border-left: solid 2px #72c02c;
+	border-left: solid 2px #428bca;
 }
 
 /*Tag Boxes v7*/
 .tag-box-v7 {
-	border-bottom: solid 2px #72c02c;
+	border-bottom: solid 2px #428bca;
 }
 
 /*Font Awesome Icon Page Style*/
 .fa-icons li:hover { 
-   color: #72c02c;
+   color: #428bca;
 }
 
 .fa-icons li:hover i {
-   background: #72c02c; 
+   background: #428bca; 
 }
 
 /*GLYPHICONS Icons Page Style*/
 .bs-glyphicons li:hover {
-   color: #72c02c;
+   color: #428bca;
 }
 
 /*Navigation
@@ -524,8 +524,8 @@ ul.blog-tags a:hover {
 .pagination > .active > span:hover, 
 .pagination > .active > a:focus, 
 .pagination > .active > span:focus {
-   background-color: #72c02c;
-   border-color: #72c02c;
+   background-color: #428bca;
+   border-color: #428bca;
 }
 
 .pagination li a:hover {
@@ -543,5 +543,5 @@ ul.blog-tags a:hover {
 /*Registration and Login Page v2
 ------------------------------------*/
 .reg-block {
-	border-top: solid 2px #72c02c;
+	border-top: solid 2px #428bca;
 }
