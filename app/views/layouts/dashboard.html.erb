@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+
+<html>
+<head>
+  <title>CYVSA</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- <%= params %>  checo en que accion estoy--> 
+<!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Dashboard</h1>
+            <ul class="pull-right breadcrumb">
+               <!-- <li><%= link_to "Back Home", root_path  %></li>
+                <li><%= link_to "show", @home  %></li>
+                <li class="active">Login</li>-->
+              </li>
+                    
+                    <li class="topbar-devider"></li>
+                    <% if signed_in? %>
+                    <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                    <li>
+                        <li class="topbar-devider"></li>
+                        <%= link_to "Sign out", signout_path, method: "delete" %>
+                    </li>
+                    <li class="topbar-devider"></li>
+                    <li><%= link_to "Back Home", root_path  %> </li> 
+                    <li class="topbar-devider"></li>
+                     <li><%= link_to "New logo", new_home_path %></li>
+                    <% else %>
+                    <li><%= link_to "Sign in", signin_path %></li>
+
+                    
+                    <% end %> 
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+ 
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+  
+<%= yield %>
+
+
+
+<script type="text/javascript">
+
+    jQuery(window).load(function() {
+      // alert(" imagenes esta listas ");
+      //  console.log( " eeeeeestaaaalisstaaa las imagenes :)ready!" );
+        App.init();
+        PortfolioPage.init();
+        Index.initParallaxSlider();        
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+<![endif]-->
+
+</body>
+</html>

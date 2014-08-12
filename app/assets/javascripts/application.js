@@ -295,9 +295,14 @@ var App = function () {
            }
            $.each(this, function() {
                var $this = $(this);
+              /* console.log("metodo");*/
                $this.bind('change', function(evt) {
-                   $('#image_url').attr('src', '');
+                   var image = $(this).data('image');
+                   /*alert(image);*/
                    var files = evt.target.files; // FileList object
+                    $('#' + image).attr('src', '');
+
+
                    // Loop through the FileList and render image files as thumbnails.
                    for (var i = 0, f; f = files[i]; i++) {
                        // Only process image files.
@@ -309,7 +314,7 @@ var App = function () {
                        reader.onload = (function(theFile) {
                            return function(e) {
                                // Render thumbnail.
-                               $('#image_url').attr('src', e.target.result);
+                               $('#' + image).attr('src', e.target.result);
                            };
                        })(f);
                        // Read in the image file as a data URL.
@@ -324,7 +329,8 @@ var App = function () {
 })(jQuery);
 
 $(document).ready(function($) {
-    $("#home_logo").imagePreview();
+    $(".input_pluguin").imagePreview();
+    /*$("#home_slider_image_one").imagePreview();*/
 
     
 });

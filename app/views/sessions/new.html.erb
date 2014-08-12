@@ -2,19 +2,22 @@
 <div class="container content">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 reg-page">
-		<div class="reg-header">            
-                        <h2>Login to your account</h2>
-                    </div>
-
+			<div class="reg-header">
+				<h2>Login to your account</h2>
+			</div>
 			<%= form_for(:session, url: sessions_path) do |f| %>
-			<%= f.label :email %>
-			<%= f.text_field :email, :autofocus => false, class: 'form-control margin-bottom-20', placeholder:"Email" %>
-			<%= f.label :password %>
-			<%= f.password_field :password,autocomplete: "off", :class => "form-control margin-bottom-20", placeholder:"Contraseña" %>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+				<%= f.text_field :email, :autofocus => false, class: 'form-control margin-bottom-20', placeholder:"Email" %>
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+				<%= f.password_field :password,autocomplete: "off", :class => "form-control margin-bottom-20", placeholder:"Contraseña" %>
+			</div>
+			
 			<div class="col-lg-3 text-right">
 				<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
 				
-
 			</div>
 			<% end %></br></br></br>
 			<p>New user? <%= link_to "Sign up now!", signup_path %></p>
