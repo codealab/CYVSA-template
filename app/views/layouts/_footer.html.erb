@@ -14,8 +14,8 @@
                     <!-- End About -->
 
                     <!-- Monthly Newsletter -->
-                    <div class="headline"><h2>Bolsa de trabajo </h2></div> 
-                    <p>Podras informate de vacantes de empleo aquí </p>
+                    <div class="headline"><h2><%= job("Ponga su título aquí.","titulo") %> </h2></div> 
+                    <p><%= job("Ponga la información acerca de la bolsa de trabajo","descripcion") %></p>
                     <button class="btn-u btn-u-blue" type="button"> Bolsa de trabajo</button> 
                     </br></br>
                    
@@ -33,7 +33,7 @@
                 <div class="col-md-4 md-margin-bottom-40">
                     <!-- Recent Blogs -->
                     <div class="posts">
-                        <div class="headline"><h2>RECONICIMIENTOS IMEI</h2></div>
+                        <div class="headline"><h2><%= recognition %></h2></div>
                         <dl class="dl-horizontal">
                             <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
                             <dd>
@@ -58,7 +58,7 @@
 
                 <div class="col-md-4">
                     <!-- Contact Us -->
-                    <div class="headline"><h2>Contactanos</h2></div> 
+                    <div class="headline"><h2><%= about_us("Ponga su título aquí.","about")  %></h2></div> 
                     <address class="md-margin-bottom-40">
                     <p> Corporativo: CYVSA</p>
                          <p>Dirección: <%= about_us("Escribe la direccion de la empresa","direccion")%><br /></p>
@@ -71,8 +71,8 @@
                     <!-- End Contact Us -->
 
                     <!-- Social Links -->
-                    <div class="headline"><h2>Oficinas y Centro de Mantenimiento</h2></div>
-                    <p> Podras encontrar Oficinas y centro de mantenimiento</p> 
+                    <div class="headline"><h2><%= office("Ponga su título aquí","titulo")  %></h2></div>
+                    <p> <%= office("Ponga su descripción aquí","drescripcio") %></p> 
                     
                      <button class="btn btn-block btn-googleplus rounded">
                       <i class="fa fa-map-marker"></i> Google Maps
