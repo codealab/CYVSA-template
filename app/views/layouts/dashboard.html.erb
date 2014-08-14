@@ -12,30 +12,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!-- <%= params %>  checo en que accion estoy--> 
+ <%= params %>  <!--checo en que accion estoy-->
 <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">Dashboard</h1>
+            <a class="navbar-brand" href="index.html">
+                        
+                        <img id="logo-header" src="<%= logo%>" alt="Logo">
+                    </a>
             <ul class="pull-right breadcrumb">
-               <!-- <li><%= link_to "Back Home", root_path  %></li>
-                <li><%= link_to "show", @home  %></li>
-                <li class="active">Login</li>-->
+               
               </li>
                     
-                    <li class="topbar-devider"></li>
+                    
                     <% if signed_in? %>
+                    
+                    <li>Hola: <%= current_user.name%></li>
+                    
                     <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                     <li>
-                        <li class="topbar-devider"></li>
-                        <%= link_to "Sign out", signout_path, method: "delete" %>
+                        
+                        <%= link_to "Salir del administrador", signout_path, method: "delete" %>
                     </li>
-                    <li class="topbar-devider"></li>
-                    <li><%= link_to "Back Home", root_path  %> </li> 
-                    <li class="topbar-devider"></li>
-                     <li><%= link_to "New logo", new_home_path %></li>
+                    
+                    
+                    
+                     <li><%= link_to "Home", root_path %></li>
+                     <li><%= link_to "Informativos", new_home_path %></li>
+                     <li><%= link_to "Historia", new_home_path %></li>
+                     <li><%= link_to "servicios", new_home_path %></li>
+                     <li><%= link_to "Proyectos", new_home_path %></li>
+                     <li><%= link_to "Reconocimientos y Matto", new_home_path %></li>
                     <% else %>
-                    <li><%= link_to "Sign in", signin_path %></li>
+                    <li><%= link_to "Sign in", admin_path %></li>
 
                     
                     <% end %> 
