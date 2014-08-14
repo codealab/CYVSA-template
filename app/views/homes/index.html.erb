@@ -1,23 +1,21 @@
 <!--=== Slider ===-->
-
 <div class="slider-inner">
     <div id="da-slider" class="da-slider">
         <div class="da-slide">
-            <h2><i>CLEAN &amp; FRESH</i> <br /> <i>FULLY RESPONSIVE</i> <br /> <i>DESIGN</i></h2>
-            <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
-            <div class="da-img"><img class="img-responsive" src="<%= slider %>" alt=""></div>
+            <h2><i> <%= slider(" Título de imagen.","titulo")  %></i></h2>
+            <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion") %></i></p>
+            <div class="da-img"><img class="img-responsive" src="<%= photo(1)%>"  alt=""></div>
         </div>
         <div class="da-slide">
-            <h2><i>RESPONSIVE VIDEO</i> <br /> <i>SUPPORT AND</i> <br /> <i>MANY MORE</i></h2>
-            <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i></p>
-            <div class="da-img">
-                <iframe src="http://player.vimeo.com/video/47911018" width="530" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </div>
+            <h2><i><%= slider("Título de imagen.","titulo")  %></i> </h2>
+            <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion") %></i> </p>
+            <div class="da-img"><img class="img-responsive" src="<%= photo(2) %>" alt=""></div>
+            
         </div>
         <div class="da-slide">
-            <h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML5/CSS3</i></h2>
-            <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
-            <div class="da-img"><img src="/assets/html5andcss3.png" alt="image01" /></div>
+            <h2><i><%= slider("Título de imagen.","titulo")%></i> </h2>
+            <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion")%></i> </p>
+            <div class="da-img"><img src=" <%= photo(3) %> " alt="image01" /></div>
         </div>
         <div class="da-arrows">
             <span class="da-arrows-prev"></span>
@@ -25,8 +23,7 @@
         </div>
     </div>
     </div><!--/slider-->
-   
-
+    
     <!--=== End Slider ===-->
     <!--=== Purchase Block ===-->
     <div class="purchase">
@@ -34,29 +31,26 @@
             <div class="row">
                 <div class="col-md-9 animated fadeInLeft">
                     <!-- <span>Unify is a clean and fully responsive incredible Template.</span> -->
-                    <p><%= promocional %></p>
+                    <p><%= promocional("Ponga su título aquí.","titulo") %></p>
+                    <p><%= promocional("Ponga su descripción aquí.","descripcion") %></p>
                 </div>
                 <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="#" class="btn-u btn-u-lg">Contactanos Ahora</a>
+                    <a href="#" class="btn-u btn-u-lg"><%= promocional("Ponga su título de boton aquí","boton") %></a>
                 </div>
             </div>
         </div>
         </div><!--/row-->
-
-
-
-
         <!-- End Purchase Block -->
         <!--=== Content Part ===-->
         <div class="container content">
-        <div class="shadow-wrapper">
-            <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
-            <a href="#" class="btn-u btn-u-lg pull-right">Nuestra Historia</a>
-                <p><%= history %> </p> 
-                
+            <div class="shadow-wrapper">
+                <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+                    <a href="#" class="btn-u btn-u-lg pull-right"><%= history("Ponga su título de boton aquí.","boton") %></a>
+                    <p><%= history("Ponga su título aquí.","titulo") %> </p>
+                    <p><%= history("Ponga su descripción aquí.","descripcion") %> </p>
+                    
+                </div>
             </div>
-
-        </div>
             <!-- Service Blocks -->
             <div class="row margin-bottom-30">
                 <div class="col-md-4">
@@ -87,14 +81,10 @@
                     </div>
                 </div>
             </div>
-
-
-
             <!-- End Service Blokcs -->
-
             
             
         </div>
     </div>
 </div>
-                    <!-- End Portfolio Sorting Blocks -->
+<!-- End Portfolio Sorting Blocks -->

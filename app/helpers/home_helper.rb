@@ -6,35 +6,92 @@ module HomeHelper
     logo_path
   end
 
-  def slider
+  def photo(imagen)
     slider_path ="/assets/1.png"
-    slider_path = Home.first.slider_image_one if Home.first
+
+    if Home.first
+
+      case imagen
+
+      when 1
+        slider_path = Home.first.slider_image_one if !Home.first.slider_image_one.blank?
+
+      when 2
+        slider_path = Home.first.slider_image_two !Home.first.slider_image_two.blank?
+
+      when 3
+        slider_path = Home.first.slider_image_three !Home.first.slider_image_three.blank?
+
+      end
+    end
     slider_path
   end
 
-  def promocional
-    promo =  "<span>Ponga su título aquí.</span>
-              <p>Describa acerca de la empresa .</p> "
+
+
+
+  def slider (texto_default, titulo)
+    text = texto_default
+
     if Home.first
-      if !Home.first.title_promocional.blank?
-        promo = Home.first.title_promocional
+
+      case titulo
+
+      when "titulo"
+        text = Home.first.slider_title_one if !Home.first.text_promocional.blank?
+
+      when "boton"
+        text = Home.first.slider_text_oneif !Home.first.slider_text_one.blank?
+
       end
     end
-    promo.html_safe
+    text.to_s.html_safe
   end
 
 
-  def history
-    historia = "<span>Ponga su título aquí.</span>
-              <p>Describa acerca de la historia empresa .</p> "
+
+  def promocional (texto_default, titulo)
+    text = texto_default
+
     if Home.first
-      if !Home.first.title_history
-        historia = Home.first.title_history.blank?
+
+      case titulo
+
+      when "titulo"
+        text = Home.first.title_promocional if !Home.first.title_promocional.blank?
+
+      when "descripcion"
+        text = Home.first.text_promocional if !Home.first.text_promocional.blank?
+
+      when "boton"
+        text = Home.first.title_button_promocional if !Home.first.title_button_promocional.blank?
 
       end
     end
-    historia.html_safe
+    text.to_s.html_safe
+  end
 
+
+
+  def history (texto_default, titulo)
+    text = texto_default
+
+    if Home.first
+
+      case titulo
+
+      when "titulo"
+        text = Home.first.title_history if !Home.first.title_history.blank?
+
+      when "descripcion"
+        text = Home.first.text_history if !Home.first.text_history.blank?
+
+      when "boton"
+        text = Home.first.title_button_history if !Home.first.title_button_history.blank?
+
+      end
+    end
+    text.to_s.html_safe
   end
 
   def recognition
@@ -48,37 +105,6 @@ module HomeHelper
     reconocimiento.html_safe
   end
 
-  # def job
-  #   trabajo = "<span>Ponga su título aquí.</span>"
-  #   if Home.first
-  #     if !Home.first.title_job
-  #       trabajo = Home.first.title_job.blank?
-
-  #     end
-  #   end
-  #   trabajo.html_safe
-
-  # end
-
-
-
-
-
-
-  # def servicio(service)
-  #   servicio =  "<h3>Ponga su título aquí de servicio </h3> <p>Escriba acerca del servicio..</p> "
-  #   if Home.first
-  #     case service
-  #     when 1
-  #       servicio = Home.first.servicio1 if !Home.first.servicio1.blank?
-  #     when 2
-  #       servicio = Home.first.servicio2 if !Home.first.servicio2.blank?
-  #     when 3
-  #       servicio = Home.first.servicio3 if !Home.first.servicio3.blank?
-  #     end
-  #   end
-  #   servicio.html_safe
-  # end
 
   def job (texto_default, titulo)
     text = texto_default
@@ -92,6 +118,9 @@ module HomeHelper
 
       when "descripcion"
         text = Home.first.text_job if !Home.first.text_job.blank?
+
+      when "boton"
+        text = Home.first.title_button_job if !Home.first.title_button_job.blank?
 
       end
     end
@@ -119,97 +148,32 @@ module HomeHelper
 
 
 
+  def about_us (text_default, nombre )
 
+    texto = text_default
 
+    if Home.first
 
+      case nombre
 
+      when "about"
+        texto = Home.first.title_contact if !Home.first.title_contact.blank?
 
+      when "direccion"
+        texto = Home.first.address if !Home.first.address.blank?
 
+      when  "fax"
+        texto = Home.first.fax if !Home.first.fax.blank?
 
+      when "telefono"
+        texto= Home.first.telephone if !Home.first.telephone.blank?
 
-    def about_us (text_default, nombre )
-
-      texto = text_default
-
-
-
-      if Home.first
-
-        case nombre
-
-        when "about"
-          texto = Home.first.title_contact if !Home.first.title_contact.blank?
-
-        when "direccion"
-          texto = Home.first.address if !Home.first.address.blank?
-
-        when  "fax"
-          texto = Home.first.fax if !Home.first.fax.blank?
-
-        when "telefono"
-          texto= Home.first.telephone if !Home.first.telephone.blank?
-
-        when "email"
-          texto = Home.first.email if !Home.first.email.blank?
-        end
+      when "email"
+        texto = Home.first.email if !Home.first.email.blank?
       end
-      texto.to_s.html_safe
-
     end
-
-
-
-    # def about
-    #   about_us = " <p>Escribe acerca de la empresa</P> "
-    #   if Home.first
-    #     if !Home.first.about.blank?
-    #       about_us = Home.first.about
-    #     end
-    #   end
-    #   about_us.html_safe
-    # end
-
-
-
-    # def address
-    #   direccion = "<p>Escribe la direccion de la empresa.</P>"
-    #   if Home.first
-    #     if !Home.first.direccion.blank?
-    #       direccion = Home.first.direccion
-    #     end
-    #   end
-    #   direccion.html_safe
-    # end
-
-    # def phone
-    #   telefono = "<p> Escribe elnúmero de telefono de la empresa</p> <p> 777-777-777</p>"
-    #   if Home.first
-    #     if !Home.first.telefono.blank?
-    #       telefono = Home.first.telefono
-    #     end
-    #   end
-    #   telefono.html_safe
-    # end
-
-
-    # def fax
-    #   fax = "<p> Escribe el número de fax de la empresa</p> <p> 555-5555-555</p>"
-    #   if Home.first
-    #     if !Home.first.fax.blank?
-    #       fax = Home.first.fax
-    #     end
-    #   end
-    #   fax.html_safe
-    # end
-
-    # def email
-    #    correo = "<p> Escribe el email de la empresa</p> <p> empresa@yahoo.com</p>"
-    #   if Home.first
-    #     if !Home.first.email.blank?
-    #       correo = Home.first.email
-    #     end
-    #   end
-    #   correo.html_safe
-    # end
+    texto.to_s.html_safe
 
   end
+
+end
