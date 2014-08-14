@@ -1,4 +1,5 @@
 Template::Application.routes.draw do
+  resources :services
   resources :dashboards
   resources :homes
   resources :users
