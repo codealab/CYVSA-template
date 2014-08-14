@@ -32,12 +32,17 @@
                     <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                     <li>
                         
-                        <%= link_to "Sign out", signout_path, method: "delete" %>
+                        <%= link_to "Salir del administrador", signout_path, method: "delete" %>
                     </li>
                     
-                    <li><%= link_to "Back Home", root_path  %> </li> 
                     
-                     <li><%= link_to "New logo", new_home_path %></li>
+                    
+                     <li><%= link_to "Home", root_path %></li>
+                     <li><%= link_to "Informativos", new_home_path %></li>
+                     <li><%= link_to "Historia", new_home_path %></li>
+                     <li><%= link_to "servicios", new_home_path %></li>
+                     <li><%= link_to "Proyectos", new_home_path %></li>
+                     <li><%= link_to "Reconocimientos y Matto", new_home_path %></li>
                     <% else %>
                     <li><%= link_to "Sign in", admin_path %></li>
 

@@ -1,95 +1,83 @@
-
-<!--=== Footer Version 1 ===-->
-    <div class="footer-v1">
-        <div class="footer">
-            <div class="container">
-                <div class="row">
+ <!--=== Footer ===-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 md-margin-bottom-40">
                     <!-- About -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img class="footer-logo" src="/assets/logo2-default.png" alt=""></a>
-                        <p><%= about_us("Escribe acerca de la empresa ","about")%></p>
-                        <p></p>    
-                    </div><!--/col-md-3-->
+                    <div class="headline"><h2>Redes sociales</h2></div>  
+                     <ul class="social-icons">
+                        <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+                        <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+                        <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+                        <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+                        <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+                        <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+                        <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+                    </ul>
+                    <!-- End Social Links -->   
                     <!-- End About -->
 
-                    <!-- Latest -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="posts">
-                            <div class="headline"><h2>Latest Posts</h2></div>
-                            <ul class="list-unstyled latest-list">
-                                <li>
-                                    <a href="#">Incredible content</a>
-                                    <small>May 8, 2014</small>
-                                </li>
-                                <li>
-                                    <a href="#">Best shoots</a>
-                                    <small>June 23, 2014</small>
-                                </li>
-                                <li>
-                                    <a href="#">New Terms and Conditions</a>
-                                    <small>September 15, 2014</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!--/col-md-3-->  
-                    <!-- End Latest --> 
-                    
-                    <!-- Link List -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2>Useful Links</h2></div>
-                        <ul class="list-unstyled link-list">
-                            <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
-                        </ul>
-                    </div><!--/col-md-3-->
-                    <!-- End Link List -->                    
+                    <!-- Monthly Newsletter -->
+                    <div class="headline"><h2>Suscribete a nuestras noticias </h2></div> 
+                    <p>Suscribete para recibir el boletin con las noticias de CYVSA</p>
+                    <form class="footer-subsribe">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email Address">                            
+                            <span class="input-group-btn">
+                                <button class="btn-u" type="button">Subscribe</button>
+                            </span>
+                        </div>                  
+                    </form>                         
+                    <!-- End Monthly Newsletter -->
+                </div><!--/col-md-4-->  
+                
+                <div class="col-md-4 md-margin-bottom-40">
+                    <!-- Recent Blogs -->
+                    <div class="posts">
+                        <div class="headline"><h2>RECONICIMIENTOS IMEI</h2></div>
+                        <dl class="dl-horizontal">
+                            <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            </dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                        <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            </dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                        <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- End Recent Blogs -->                    
+                </div><!--/col-md-4-->
 
-                    <!-- Address -->
-                    <div class="col-md-3 map-img md-margin-bottom-40">
-                        <div class="headline"><h2>Contact Us</h2></div>                         
-                        <address class="md-margin-bottom-40">
-                        Dirección:<%= about_us("Escribe la direccion de la empresa","direccion")%><br />
+                <div class="col-md-4">
+                    <!-- Contact Us -->
+                    <div class="headline"><h2>Contactanos</h2></div> 
+                    <address class="md-margin-bottom-40">
+                    <p> Corporativo: CYVSA</p>
+                         <p>Dirección: <%= about_us("Escribe la direccion de la empresa","direccion")%><br /></p>
                             
-                            Telefono: <%= about_us("Escribe el telefono de la empresa","telefono")%><br />
-                            Fax:<%= about_us("Escribe el fax de la empresa","fax")%><br />
-                            Email:<%= about_us("Escribe el Eamil de la empresa","email")%>
-                        </address>
+                            <p>Teléfono: <%= about_us("Escribe el telefono de la empresa","telefono")%><br /></p>
+                            <p>Fax: <%= about_us("Escribe el fax de la empresa","fax")%><br /></p>
+                            <p>Email: <%= about_us("Escribe el Eamil de la empresa","email")%></p>
+                    </address>
+                    <!-- End Contact Us -->
 
-                    </div><!--/col-md-3-->
-                    <!-- End Address -->
-                </div>
-            </div> 
-        </div><!--/footer-->
-
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">                     
-                        <p>
-                            2014 &copy; All Rights Reserved. Unify Theme by 
-                            <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-                        </p>
-                    </div>
                     <!-- Social Links -->
-                    <div class="col-md-6">  
-                        <ul class="social-icons pull-right">
-                            <li><a href="#" data-original-title="Facebook" class="rounded-x social_facebook"></a></li>
-                            <li><a href="#" data-original-title="Twitter" class="rounded-x social_twitter"></a></li>
-                            <li><a href="#" data-original-title="Goole Plus" class="rounded-x social_googleplus"></a></li>
-                            <li><a href="#" data-original-title="Linkedin" class="rounded-x social_linkedin"></a></li>
-                            <li><a href="#" data-original-title="Pinterest" class="rounded-x social_pintrest"></a></li>
-                        </ul>
-                    </div>
-                    <!-- End Social Links -->
-                </div>
-            </div> 
-        </div><!--/copyright-->
-    </div>     
-    <!--=== End Footer Version 1 ===-->
-</div>
+                    <div class="headline"><h2>Oficinas y Centro de Mantenimiento</h2></div> 
+                   
+                </div><!--/col-md-4-->
+            </div>
+        </div> 
+    </div><!--/footer-->
+    <!--=== End Footer ===-->
 
-<!--/wrapper-->
-
+    
+    <!--=== End Copyright ===-->
