@@ -11,12 +11,26 @@ class CreateHomes < ActiveRecord::Migration
       t.string :slider_image_three
       t.string :slider_title_three
       t.text   :slider_text_three
-      t.text   :promocional
-      t.string :about
+      t.string :title_promocional
+      t.text   :text_promocional
+      t.string :title_button_promocional
+      t.string :title_history
+      t.text   :text_history
+      t.string :title_button_history
+      t.string :title_contact
       t.string :address
-      t.integer :telephone
+      t.integer :telephone_one
+      t.integer :telephone_two
       t.integer :fax
       t.string :email
+      t.string :title_recognition
+      t.text   :text_recognition
+      t.string :title_office
+      t.text   :text_office
+      t.string :title_button_office
+      t.string :title_job
+      t.text   :text_job
+      t.string :title_button_job
       
 
       t.timestamps

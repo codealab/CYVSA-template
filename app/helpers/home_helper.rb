@@ -14,14 +14,56 @@ module HomeHelper
 
   def promocional
     promo =  "<span>Ponga su título aquí.</span>
-							<p>Describa acerca de la empresa .</p> "
+              <p>Describa acerca de la empresa .</p> "
     if Home.first
-      if !Home.first.promocional.blank?
-        promo = Home.first.promocional
+      if !Home.first.title_promocional.blank?
+        promo = Home.first.title_promocional
       end
     end
     promo.html_safe
   end
+
+
+  def history
+    historia = "<span>Ponga su título aquí.</span>
+              <p>Describa acerca de la historia empresa .</p> "
+    if Home.first
+      if !Home.first.title_history
+        historia = Home.first.title_history.blank?
+
+      end
+    end
+    historia.html_safe
+
+  end
+
+  def recognition
+    reconocimiento = "<span>Ponga su título aquí.</span>"
+    if Home.first
+      if !Home.first.title_recognition
+        reconocimiento = Home.first.title_recognition.blank?
+
+      end
+    end
+    reconocimiento.html_safe
+  end
+
+  # def job
+  #   trabajo = "<span>Ponga su título aquí.</span>"
+  #   if Home.first
+  #     if !Home.first.title_job
+  #       trabajo = Home.first.title_job.blank?
+
+  #     end
+  #   end
+  #   trabajo.html_safe
+
+  # end
+
+
+
+
+
 
   # def servicio(service)
   #   servicio =  "<h3>Ponga su título aquí de servicio </h3> <p>Escriba acerca del servicio..</p> "
@@ -38,91 +80,136 @@ module HomeHelper
   #   servicio.html_safe
   # end
 
+  def job (texto_default, titulo)
+    text = texto_default
+
+    if Home.first
+
+      case titulo
+
+      when "titulo"
+        text = Home.first.title_job if !Home.first.title_job.blank?
+
+      when "descripcion"
+        text = Home.first.text_job if !Home.first.text_job.blank?
+
+      end
+    end
+    text.to_s.html_safe
+  end
 
 
-  def about_us (text_default, nombre )
+  def office (texto_default, titulo)
+    text = texto_default
 
-  	texto = text_default
-  	
+    if Home.first
 
+      case titulo
 
-  	if Home.first
+      when "titulo"
+        text = Home.first.title_office if !Home.first.title_office.blank?
 
-  		case nombre
+      when "descripcion"
+        text = Home.first.text_offce if !Home.first.text_office.blank?
 
-  		when "about"
-  			texto = Home.first.about if !Home.first.about.blank?
-  		
-  		when "direccion"
-  			texto = Home.first.address if !Home.first.address.blank?
-
-  		when  "fax"
-  			texto = Home.first.fax if !Home.first.fax.blank?
-
-  		when "telefono"
-  			texto= Home.first.telephone if !Home.first.telephone.blank?
-
-  		when "email"
-  			texto = Home.first.email if !Home.first.email.blank?
-  		end
-  	end
-  	texto.to_s.html_safe
-  	
+      end
+    end
+    text.to_s.html_safe
   end
 
 
 
-  # def about
-  # 	about_us = " <p>Escribe acerca de la empresa</P> "
-  # 	if Home.first
-  # 		if !Home.first.about.blank?
-  # 			about_us = Home.first.about
-  # 		end
-  # 	end
-  # 	about_us.html_safe
-  # end
 
 
 
-  # def address
-  # 	direccion = "<p>Escribe la direccion de la empresa.</P>"
-  # 	if Home.first
-  # 		if !Home.first.direccion.blank?
-  # 			direccion = Home.first.direccion
-  # 		end
-  # 	end
-  # 	direccion.html_safe
-  # end
-
-  # def phone
-  # 	telefono = "<p> Escribe elnúmero de telefono de la empresa</p> <p> 777-777-777</p>"
-  # 	if Home.first
-  # 		if !Home.first.telefono.blank?
-  # 			telefono = Home.first.telefono
-  # 		end
-  # 	end
-  # 	telefono.html_safe
-  # end
 
 
-  # def fax
-  # 	fax = "<p> Escribe el número de fax de la empresa</p> <p> 555-5555-555</p>"
-  # 	if Home.first
-  # 		if !Home.first.fax.blank?
-  # 			fax = Home.first.fax
-  # 		end
-  # 	end
-  # 	fax.html_safe
-  # end
 
-  # def email
-  # 	 correo = "<p> Escribe el email de la empresa</p> <p> empresa@yahoo.com</p>"
-  # 	if Home.first
-  # 		if !Home.first.email.blank?
-  # 			correo = Home.first.email
-  # 		end
-  # 	end
-  # 	correo.html_safe
-  # end
 
-end
+
+    def about_us (text_default, nombre )
+
+      texto = text_default
+
+
+
+      if Home.first
+
+        case nombre
+
+        when "about"
+          texto = Home.first.title_contact if !Home.first.title_contact.blank?
+
+        when "direccion"
+          texto = Home.first.address if !Home.first.address.blank?
+
+        when  "fax"
+          texto = Home.first.fax if !Home.first.fax.blank?
+
+        when "telefono"
+          texto= Home.first.telephone if !Home.first.telephone.blank?
+
+        when "email"
+          texto = Home.first.email if !Home.first.email.blank?
+        end
+      end
+      texto.to_s.html_safe
+
+    end
+
+
+
+    # def about
+    #   about_us = " <p>Escribe acerca de la empresa</P> "
+    #   if Home.first
+    #     if !Home.first.about.blank?
+    #       about_us = Home.first.about
+    #     end
+    #   end
+    #   about_us.html_safe
+    # end
+
+
+
+    # def address
+    #   direccion = "<p>Escribe la direccion de la empresa.</P>"
+    #   if Home.first
+    #     if !Home.first.direccion.blank?
+    #       direccion = Home.first.direccion
+    #     end
+    #   end
+    #   direccion.html_safe
+    # end
+
+    # def phone
+    #   telefono = "<p> Escribe elnúmero de telefono de la empresa</p> <p> 777-777-777</p>"
+    #   if Home.first
+    #     if !Home.first.telefono.blank?
+    #       telefono = Home.first.telefono
+    #     end
+    #   end
+    #   telefono.html_safe
+    # end
+
+
+    # def fax
+    #   fax = "<p> Escribe el número de fax de la empresa</p> <p> 555-5555-555</p>"
+    #   if Home.first
+    #     if !Home.first.fax.blank?
+    #       fax = Home.first.fax
+    #     end
+    #   end
+    #   fax.html_safe
+    # end
+
+    # def email
+    #    correo = "<p> Escribe el email de la empresa</p> <p> empresa@yahoo.com</p>"
+    #   if Home.first
+    #     if !Home.first.email.blank?
+    #       correo = Home.first.email
+    #     end
+    #   end
+    #   correo.html_safe
+    # end
+
+  end
