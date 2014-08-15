@@ -1,22 +1,4 @@
 class HomesController < ApplicationController
-  
-  def index
-    @homes = Home.all
-    @projects = Project.order("id DESC").limit(2)
-
-  end
-
-
-
-  def show
-    @home = Home.find(params[:id])
-
-  end
-
-  def new
-    @home = Home.new
-
-  end
 
   def edit
     @home = Home.find(params[:id])
@@ -24,39 +6,23 @@ class HomesController < ApplicationController
   end
 
   def update
-   
+
     @home = Home.find(params[:id])
     if @home.update_attributes(home_params)
       flash[:success]= "image updated"
+      redirect_to dashboard_path
 
-      if params[:home][:show]
-        redirect_to @home
-      else
-
-        redirect_to edit_home_path(@home)
-      end
+      # if params[:home][:show]
+      #   redirect_to @home
+      # else
+      #   redirect_to edit_home_path(@home)
+      # end
 
     else
       render 'edit'
+  
     end
 
-  end
-
-  def create
-    @home = Home.new(home_params)
-    if @home.save
-      flash[:success] = "Successfully created."
-      redirect_to @home
-    else
-      render :action => 'new'
-    end
-  end
-
-  def destroy
-    @home = Home.find(params[:id])
-    @home.destroy
-    flash[:success] = "Successfully destroyed image."
-    redirect_to homes_url
   end
 
   private
@@ -72,13 +38,26 @@ class HomesController < ApplicationController
       :slider_image_three,
       :slider_title_three,
       :slider_text_three,
-      :promocional,
-      :about,
+      :title_promocional,
+      :text_promocional,
+      :title_button_promocional,
+      :title_history,
+      :text_history,
+      :title_button_history,
+      :title_contact,
       :address,
-      :telephone,
+      :telephone_one,
+      :telephone_two,
       :fax,
-    :email)
+      :email,
+      :title_recognition,
+      :text_recognition,
+      :title_office,
+      :text_office,
+      :title_button_office,
+      :title_job,
+      :text_job,
+    :title_button_job,)
 
   end
-
 end
