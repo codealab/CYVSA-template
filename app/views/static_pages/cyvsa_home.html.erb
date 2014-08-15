@@ -9,13 +9,13 @@
         <div class="da-slide">
             <h2><i><%= slider("Título de imagen.","titulo")  %></i> </h2>
             <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion") %></i> </p>
-            <div class="da-img"><img class="img-responsive" src="<%= photo(2) %>" alt=""></div> 
+            <div class="da-img"><img class="img-responsive" src="<%= photo(2) %>" alt=""></div>
             
         </div>
         <div class="da-slide">
             <h2><i><%= slider("Título de imagen.","titulo")%></i> </h2>
             <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion")%></i> </p>
-         <div class="da-img"><img src=" <%= photo(3) %> " alt="image01" /></div> 
+            <div class="da-img"><img src=" <%= photo(3) %> " alt="image01" /></div>
         </div>
         <div class="da-arrows">
             <span class="da-arrows-prev"></span>
@@ -25,66 +25,17 @@
     </div><!--/slider-->
     
     <!--=== End Slider ===-->
-    <!--=== Purchase Block ===-->
-    <div class="purchase">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9 animated fadeInLeft">
-                    <!-- <span>Unify is a clean and fully responsive incredible Template.</span> -->
-                    <p><%= promocional("Ponga su título aquí.","titulo") %></p>
-                    <p><%= promocional("Ponga su descripción aquí.","descripcion") %></p>
-                </div>
-                <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="#" class="btn-u btn-u-lg"><%= promocional("Ponga su título de boton aquí","boton") %></a>
-                </div>
-            </div>
-        </div>
-        </div><!--/row-->
-        <!-- End Purchase Block -->
-        <!--=== Content Part ===-->
-        <div class="container content">
-            <div class="shadow-wrapper">
-                <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
-                    <a href="#" class="btn-u btn-u-lg pull-right"><%= history("Ponga su título de boton aquí.","boton") %></a>
-                    <p><%= history("Ponga su título aquí.","titulo") %> </p>
-                    <p><%= history("Ponga su descripción aquí.","descripcion") %> </p>
-                    
-                </div>
-            </div>
-            <!-- Service Blocks -->
-            <div class="row margin-bottom-30">
-                <div class="col-md-4">
-                    <div class="service">
-                        <i class="fa fa-compress service-icon"></i>
-                        <div class="desc">
-                            <!-- <h4>Servicio 1</h4> -->
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <i class="fa fa-cogs service-icon"></i>
-                        <div class="desc">
-                            <!-- <h4>Servicio 2</h4> -->
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <i class="fa fa-rocket service-icon"></i>
-                        <div class="desc">
-                            <!-- <h4>Servicio 3</h4> -->
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Service Blokcs -->
-            
-            
-        </div>
-    </div>
+    <!--=== partial ===-->
+
+    <%= render partial: "static_pages/promocional_home" %>
+    <%= render partial: "static_pages/historia_home" %>
+    <%= render partial: "static_pages/service_home" %>
+    <!--=== End Partia ===-->
+    
+    
+    
+    
+</div>
+</div>
 </div>
 <!-- End Portfolio Sorting Blocks -->
