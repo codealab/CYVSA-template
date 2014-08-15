@@ -1,6 +1,7 @@
 class Home < ActiveRecord::Base
-	validates  :promocional, :about, :address,  presence: true
-	validates :telephone, numericality: true
+	validates  :title_promocional, :address,  presence: true
+	validates :telephone_one, numericality: true
+	validates :telephone_two, numericality: true
 	validates :fax, numericality: true
 	
 	# validates :slider_title_one,     presence: true, length: { maximum: 30 }

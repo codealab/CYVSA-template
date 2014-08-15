@@ -1,0 +1,47 @@
+
+ <%= params %>  <!--checo en que accion estoy-->
+<!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                        
+                        <img id="logo-header" src="<%= logo%>" alt="Logo">
+                    </a>
+            <ul class="pull-right breadcrumb">
+               
+              </li>
+                    
+                    
+                    <% if signed_in? %>
+                    
+                    <li>Hola: <%= current_user.name%></li>
+                    
+<!--                     <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+ -->                    <li>
+                        
+                        <%= link_to "Salir del administrador", signout_path, method: "delete" %>
+                    </li>
+                    
+                    
+                    
+                     <li><%= link_to "Home", root_path %></li>
+                     <li><%= link_to "Informativos", new_home_path %></li>
+                     <li><%= link_to "Historia", new_home_path %></li>
+                     <li><%= link_to "servicios", new_home_path %></li>
+                     <li><%= link_to "Proyectos", new_home_path %></li>
+                     <li><%= link_to "Reconocimientos y Matto", new_home_path %></li>
+                    <% else %>
+                    <li><%= link_to "Sign in", admin_path %></li>
+
+                    
+                    <% end %> 
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+ 
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+  
+

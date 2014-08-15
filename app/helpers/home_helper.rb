@@ -7,7 +7,7 @@ module HomeHelper
   end
 
   def photo(imagen)
-    slider_path ="/assets/1.png"
+    slider_path ="/assets/3.png"
 
     if Home.first
 
@@ -17,10 +17,10 @@ module HomeHelper
         slider_path = Home.first.slider_image_one if !Home.first.slider_image_one.blank?
 
       when 2
-        slider_path = Home.first.slider_image_two !Home.first.slider_image_two.blank?
+        slider_path = Home.first.slider_image_two if  !Home.first.slider_image_two.blank?
 
       when 3
-        slider_path = Home.first.slider_image_three !Home.first.slider_image_three.blank?
+        slider_path = Home.first.slider_image_three if !Home.first.slider_image_three.blank?
 
       end
     end
@@ -159,14 +159,17 @@ module HomeHelper
       when "about"
         texto = Home.first.title_contact if !Home.first.title_contact.blank?
 
-      when "direccion"
+      when "address"
         texto = Home.first.address if !Home.first.address.blank?
 
       when  "fax"
         texto = Home.first.fax if !Home.first.fax.blank?
 
-      when "telefono"
-        texto= Home.first.telephone if !Home.first.telephone.blank?
+      when "phone_one"
+        texto= Home.first.telephone_one if !Home.first.telephone_one.blank?
+
+      when "phone_two"
+      texto= Home.first.telephone_two if !Home.first.telephone_two.blank?
 
       when "email"
         texto = Home.first.email if !Home.first.email.blank?
