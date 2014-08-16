@@ -1,3 +1,4 @@
+#encoding: UTF-8
 module ProjectHelper
   def image
     image_path = "/assets/255x161.jpeg"
@@ -8,8 +9,7 @@ module ProjectHelper
   end
 
   def title
-    texto = "<span>Ponga su título aquí.</span>
-							"
+    texto = "<span>Ponga su título aquí.</span>"
     if Project.first
       if !Project.first.title.blank?
         texto = Project.first.title

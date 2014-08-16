@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-	Home.create(promocional: 'Codealab', servicio1:'rfeffefff', servicio2: 'dwfwfwefwf', servicio3:'eftrtrrrcec', about:'Holaaaa', telefono: '34346767', fax:'124657456', email:'e@gmail.com', direccion:' Garibaldi 515. Cp.44200')
+	Home.create(servicio1:'rfeffefff', servicio2: 'dwfwfwefwf', servicio3:'eftrtrrrcec', about:'Holaaaa', telefono: '34346767', fax:'124657456', email:'e@gmail.com', direccion:' Garibaldi 515. Cp.44200')

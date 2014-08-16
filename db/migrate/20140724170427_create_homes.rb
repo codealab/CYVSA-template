@@ -31,7 +31,6 @@ class CreateHomes < ActiveRecord::Migration
       t.string :title_job
       t.text   :text_job
       t.string :title_button_job
-      
 
       t.timestamps
     end
