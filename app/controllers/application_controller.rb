@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
   include HomeHelper
   include ProjectHelper
   include SessionsHelper
+  include ServicesHelper
 end
