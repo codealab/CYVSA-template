@@ -1,4 +1,6 @@
 Template::Application.routes.draw do
+  resources :slides
+  resources :years
   get "static_pages/index"
   root "static_pages#cyvsa_home"
   resources :homes
@@ -7,10 +9,11 @@ Template::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get "project/index"
   get "portfolio/index"
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/admin',   to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
-  match '/dashboard',  to: 'sessions#dashboard',            via: 'get'
+  match '/signup',    to:     'users#new',                  via: 'get'
+  match '/admin',     to:     'sessions#new',               via: 'get'
+  match '/signout',   to:     'sessions#destroy',           via: 'delete'
+  match '/dashboard', to:  'sessions#dashboard',            via: 'get'
+  
   #devise_for :users
   #get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.

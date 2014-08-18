@@ -14,7 +14,7 @@
 <body class="header-fixed">
 <!-- <%= params %>  checo en que accion estoy--> 
 
-<% if params[:controller]== "static_pages" %>
+<% if params[:controller]== "static_pages" || params[:controller]== "years" %>
 <%= render 'layouts/header' %>
 <% else %>
 <%= render 'layouts/dashboard' %>
@@ -24,7 +24,7 @@
      
 <%= yield %>
 
-<% if params[:controller]== "static_pages" %>
+<% if params[:controller]== "static_pages" || params[:controller]== "years" %>
 <%= render 'layouts/footer' %> 
 <% end %>
 

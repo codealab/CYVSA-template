@@ -4,4 +4,11 @@ class StaticPagesController < ApplicationController
     @projects = Project.order("id DESC")
     
 	end
+
+	def index_year
+		
+		
+	end
+
+
 end
