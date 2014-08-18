@@ -17,5 +17,6 @@ module ServicesHelper
     end
     text.to_s.html_safe
   end
+  
 	
 end

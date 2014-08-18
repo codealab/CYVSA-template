@@ -18,7 +18,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
     if @service.save
       flash[:success] = "Creado exitosamente."
-     redirect_to dashboard_path
+     redirect_to services_url
     else
       render :action => 'new'
     end
@@ -34,7 +34,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
     if @service.update_attributes(service_params)
       flash[:success]= "Actualización exitosa"
-      redirect_to dashboard_path
+      redirect_to services_url
 
     else
       render 'edit'
@@ -45,7 +45,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
     @service.destroy
     flash[:success] = "Borrado exitosamente."
-    redirect_to service_url
+    redirect_to @service
   end
 
   private

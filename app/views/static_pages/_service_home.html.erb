@@ -1,8 +1,8 @@
 <!-- Service Blocks -->
 <div class="container content">
     <div class="row margin-bottom-30">
-        <div class="col-md-4">
-            <% Service.all.each do |t| %>
+        <% Service.all.each do |t| %>
+        <div class="col-sm-4 ">
             <div class="service">
                 <i class="fa <%= "#{t.icon}"%> service-icon"></i>
                 
@@ -11,26 +11,9 @@
                     <p> <%= service("describa un contenido", "descripcion") %></p>
                 </div>
             </div>
-            <% end %>
         </div>
-        <div class="col-md-4">
-            <div class="service">
-                <i class="fa  service-icon"></i>
-                <div class="desc">
-                    <%= service("escriba un titulo","titulo") %>
-                    <p> <%= service("describa un contenido", "descripcion") %></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="service">
-                <i class="fa fa-rocket service-icon"></i>
-                <div class="desc">
-                    <%= service("escriba un titulo","titulo") %>
-                    <p> <%= service("describa un contenido", "descripcion") %></p>
-                </div>
-            </div>
-        </div>
+        <% end %>
+        
     </div>
 </div>
 <!-- End Service Blokcs -->
