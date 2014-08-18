@@ -7,7 +7,6 @@ class StaticPagesController < ApplicationController
 
 	def index_year
 		
-		
 	end
 
 

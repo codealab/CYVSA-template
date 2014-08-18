@@ -1,6 +1,6 @@
 Template::Application.routes.draw do
   resources :slides
-  resources :years
+  get "static_pages/year_index"
   get "static_pages/index"
   root "static_pages#cyvsa_home"
   resources :homes
