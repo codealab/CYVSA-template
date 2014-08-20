@@ -1,40 +1,41 @@
- <!--=== Content Part ===-->
- <div class="title-box">
-            <div class="title-box-text">Nuestra<span class="color-green">Historia</span> </div>
-            <p>Cumpliendo con la VISIÓN de crecer y servir, CYVSA contruye día a día una trayectoria de exito junto con sus clientes.</p>
-        </div>
-   <div class="container content">
-   
-   <% Year.all.each_with_index do |t, index| %>
-  <% if index%2 == 0 %>
-  <ul class="timeline-v1">
+<!--=== Content Part ===-->
+<div class="title-box">
+    <div class="title-box-text">Nuestra<span class="color-green">Historia</span> </div>
+    <p>Cumpliendo con la VISIÓN de crecer y servir, CYVSA contruye día a día una trayectoria de exito junto con sus clientes.</p>
+</div>
 
-            <li class="timeline-inverted">
-            <div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <img class="img-responsive" src="<%= t.image %>" alt="">
-                    </div>
-                    <div class="timeline-body text-justify">
-                        <h2><%= t.title.to_s.html_safe  %></h2>
-                        <p><%= t.text.to_s.html_safe %></p>
-                        <a class="btn-u btn-u-sm" href="#">Read More</a>
-                    </div>
-                    <div class="timeline-footer">
-                        <ul class="list-unstyled list-inline blog-info">
-                            <li><i class="fa fa-clock-o"></i> <%= t.date.strftime("%Y")  %></li>
-                            <li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
-                        </ul>
-                        <a class="likes" href="#"><i class="fa fa-heart"></i>239</a>
-                    </div>
-                </div>
-            </li>
-            <% end %>
-
-    <% end %>
-           
-            <li class="clearfix" style="float: none;"></li>
-        </ul>
         
-    </div><!--/container-->     
-    <!-- End Content Part -->
+<div class="container content">  
+    <ul class="timeline-v1">
+        <% Year.all.each_with_index do |t, index| %>
+        <li <% if (index+1)%2 == 0 %>class="timeline-inverted" <% end %> >
+            <div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
+            <div class="timeline-panel">
+                
+                <div class="timeline-heading">
+                    <img class="img-responsive" src="<%= t.image %>" alt="">
+                </div>
+                <div class="timeline-body text-justify">
+                    <h2><%= t.title.to_s.html_safe  %></h2>
+                    <p><%= t.text.to_s.html_safe %></p>
+                    <a class="btn-u btn-u-sm" href="#">Read More</a>
+                </div>
+                <div class="timeline-footer">
+                    <ul class="list-unstyled list-inline blog-info">
+                        <li><i class="fa fa-clock-o"></i> <%= t.date.strftime("%Y")  %></li>
+                        <li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
+                    </ul>
+                    <a class="likes" href="#"><i class="fa fa-heart"></i>239</a>
+                </div>
+                
+            </div>
+            
+        </li>
+        <% end %>
+        <li class="clearfix" style="float: none;"></li>
+    </ul>
+   
+
+       
+    </div><!--/container-->
+    <!-- End Content Part --> 
