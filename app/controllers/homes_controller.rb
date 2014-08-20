@@ -9,7 +9,7 @@ class HomesController < ApplicationController
 
     @home = Home.find(params[:id])
     if @home.update_attributes(home_params)
-      flash[:success]= "image updated"
+      flash[:success]= "creado exitosamente!"
       redirect_to dashboard_path
 
       # if params[:home][:show]

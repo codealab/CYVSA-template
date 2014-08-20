@@ -197,17 +197,17 @@
 <part>division_id</part>
 </key>
 </table>
-<table x="613" y="404" name="time_line">
+<table x="566" y="386" name="year">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="content" null="1" autoincrement="0">
+<row name="text" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="title" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
-<row name="date" null="1" autoincrement="0">
+<row name="year" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
 <row name="image" null="1" autoincrement="0">

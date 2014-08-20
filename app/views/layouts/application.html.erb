@@ -12,15 +12,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="header-fixed">
-<!-- <%= params %>  checo en que accion estoy--> 
+<%= params %>  <!-- checo en que accion estoy--> 
 
-<% if params[:controller]== "static_pages" || params[:controller]== "years" %>
+<% if params[:controller]== "static_pages"|| params[:controller]== "years" %>
 <%= render 'layouts/header' %>
 <% else %>
 <%= render 'layouts/dashboard' %>
 
 <% end %>
- 
+ <% flash.each do |key, value| %>
+    
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
      
 <%= yield %>
 

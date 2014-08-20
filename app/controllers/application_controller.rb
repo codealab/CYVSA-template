@@ -6,4 +6,5 @@ class ApplicationController < ActionController::Base
   include ProjectHelper
   include SessionsHelper
   include ServicesHelper
+  include YearsHelper
 end

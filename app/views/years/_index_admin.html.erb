@@ -1,0 +1,46 @@
+<%- model_class = Year -%>
+<div class="container content">
+    <div class="panel panel-grey margin-bottom-40">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <%= link_to "Nuevo", new_year_path(@years, format: "Nuevo"), :class => 'btn btn-success btn-xs'%>
+            </div>
+            <h3 class="panel-title"><i class="fa fa-globe"></i> year</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th><%= model_class.human_attribute_name('#') %></th>
+                        <th><%= model_class.human_attribute_name(:Imagen) %></th>
+                        <th><%= model_class.human_attribute_name(:Titulo) %></th>
+                        <th><%= model_class.human_attribute_name(:Comentario) %></th>
+                        <th><%= model_class.human_attribute_name(:Año) %></th>
+                        <th><%= model_class.human_attribute_name(:Acciones) %></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <% @years.each do |year| %>
+                    <tr>
+                        <td><%=  year.id %></td>
+                        <td><%=  image_tag year.image_url(:thumb).to_s%></td>
+                        <td><%= year.title %></td>
+                        <td><%= year.text %></td>
+                        <td><%= year.date.strftime("%Y") %></td>
+                        
+                        <td>
+                            
+                            <%= link_to "Editar",  edit_year_path(year, format: "Edit"), :class => 'btn btn-warning btn-xs'%>
+
+                            <%= link_to "borrar", year_path(year),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
+                            
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>

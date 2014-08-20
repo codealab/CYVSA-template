@@ -123,7 +123,10 @@ ActiveRecord::Schema.define(version: 20140818221703) do
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
   create_table "years", force: true do |t|
-    t.integer  "year"
+    t.string   "title"
+    t.text     "text"
+    t.date     "date"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
