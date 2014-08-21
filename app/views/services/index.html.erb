@@ -4,7 +4,8 @@
     <div class="panel panel-grey margin-bottom-40">
         <div class="panel-heading">
             <div class="pull-right">
-                <%= link_to "Nuevo", new_service_path(@services, format: "Nuevo"), :class => 'btn btn-success btn-xs'%>
+              
+            <%= link_to "Nuevo", new_service_path, :class => 'btn btn-success btn-xs' %>
             </div>
             <h3 class="panel-title"><i class="fa fa-globe"></i> Servicios</h3>
         </div>
@@ -30,7 +31,8 @@
                         
                         <td>
                             
-                            <%= link_to "Editar",  edit_service_path(service, format: "Edit"), :class => 'btn btn-warning btn-xs'%>
+                            
+                            <%= link_to "Editar", edit_service_path(service), :class => 'btn btn-success btn-xs' %>
 
                             <%= link_to "borrar", service_path(service),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
                             
