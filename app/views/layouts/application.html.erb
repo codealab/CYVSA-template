@@ -1,50 +1,48 @@
-
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <html>
-<head>
-  <title>CYVSA</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body class="header-fixed">
-<%= params %>  <!-- checo en que accion estoy--> 
+  <head>
+    <title>CYVSA</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="header-fixed">
+    <%= params %>  <!-- checo en que accion estoy-->
+    <% if current_user %>
+      <% if current_user.admin %>
+      <%= render 'layouts/dashboard' %>
+      <%end %>
+    <% else %>
+      <%= render 'layouts/header' %>
+    <% end %>
 
-<% if params[:controller]== "static_pages"|| params[:controller]== "years" %>
-<%= render 'layouts/header' %>
-<% else %>
-<%= render 'layouts/dashboard' %>
-
-<% end %>
- <% flash.each do |key, value| %>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
     
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
-     
-<%= yield %>
+    <%= yield %>
 
-<% if params[:controller]== "static_pages" || params[:controller]== "years" %>
-<%= render 'layouts/footer' %> 
-<% end %>
+    <% if current_user %>
+      <% if current_user.admin %>
+      <%end %>
+    <% else %>
+      <%= render 'layouts/footer' %>
+    <% end %>
 
-
-<script type="text/javascript">
-
+    <script type="text/javascript">
     jQuery(window).load(function() {
-      // alert(" imagenes esta listas ");
-      //  console.log( " eeeeeestaaaalisstaaa las imagenes :)ready!" );
-        App.init();
-        PortfolioPage.init();
-        Index.initParallaxSlider();        
+    // alert(" imagenes esta listas ");
+    //  console.log( " eeeeeestaaaalisstaaa las imagenes :)ready!" );
+    App.init();
+    PortfolioPage.init();
+    Index.initParallaxSlider();
     });
-</script>
-<!--[if lt IE 9]>
+    </script>
+    <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
-<![endif]-->
-
-</body>
+    <![endif]-->
+  </body>
 </html>
