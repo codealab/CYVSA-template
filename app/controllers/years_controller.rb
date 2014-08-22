@@ -1,6 +1,6 @@
 class YearsController < ApplicationController
 	def index
-		@years = Year.all
+		@years = Year.order(:date).reverse
 	end
 	def index_admin
 		

@@ -67,11 +67,14 @@
 				<%= f.label :Fecha, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.date_select :date, :start_year=>1900 %>
-				</div>
+				</div></br></br>
 
 			
-			<%= f.button :submit, class: "btn-u btn-u-blue" %>
-			<%= link_to t('.cancel', default: t("helpers.links.cancel")), homes_path, class: 'btn-u btn-u-red'  %>
+		<div class="col-lg-3 text-right">
+				<%= f.submit "Crear", class: "btn btn-large btn-primary" %>
+				
+			</div>
+			<%= link_to "Cancelar", dashboard_path, class: 'btn-u btn-u-red'%>
 			
 			<% end %>
 		</div>

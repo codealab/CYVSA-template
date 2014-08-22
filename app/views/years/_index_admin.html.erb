@@ -3,7 +3,7 @@
     <div class="panel panel-grey margin-bottom-40">
         <div class="panel-heading">
             <div class="pull-right">
-                <%= link_to "Nuevo", new_year_path(@years, format: "Nuevo"), :class => 'btn btn-success btn-xs'%>
+                <%= link_to "Nuevo", new_year_path, :class => 'btn btn-success btn-xs'%>
             </div>
             <h3 class="panel-title"><i class="fa fa-globe"></i> year</h3>
         </div>
@@ -31,7 +31,7 @@
                         
                         <td>
                             
-                            <%= link_to "Editar",  edit_year_path(year, format: "Edit"), :class => 'btn btn-warning btn-xs'%>
+                            <%= link_to "Editar",  edit_year_path(year), :class => 'btn btn-warning btn-xs'%>
 
                             <%= link_to "borrar", year_path(year),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
                             

@@ -4,7 +4,7 @@
     <div class="panel panel-grey margin-bottom-40">
         <div class="panel-heading">
             <div class="pull-right">
-                <%= link_to "Nuevo", new_slide_path(@slides, format: "Nuevo"), :class => 'btn btn-success btn-xs'%>
+                <%= link_to "Nuevo", new_slide_path, :class => 'btn btn-success btn-xs'%>
             </div>
             <h3 class="panel-title"><i class="fa fa-globe"></i> Slide</h3>
         </div>
@@ -30,7 +30,7 @@
                         
                         <td>
                             
-                            <%= link_to "Editar",  edit_slide_path(slide, format: "Edit"), :class => 'btn btn-warning btn-xs'%>
+                            <%= link_to "Editar",  edit_slide_path(slide), :class => 'btn btn-warning btn-xs'%>
 
                             <%= link_to "borrar", slide_path(slide),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
                             
