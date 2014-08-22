@@ -1,4 +1,8 @@
 Template::Application.routes.draw do
+  get "informations/index"
+  get "informations/show"
+  get "informations/new"
+  get "informations/edit"
   resources :years
   resources :slides
   get "static_pages/index"
