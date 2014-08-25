@@ -12,7 +12,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th><%= model_class.human_attribute_name('#') %></th>
+                        
                         <th><%= model_class.human_attribute_name(:Imagen) %></th>
                         <th><%= model_class.human_attribute_name(:Titulo) %></th>
                         <th><%= model_class.human_attribute_name(:Comentario) %></th>
@@ -23,7 +23,7 @@
                     
                     <% @slides.each do |slide| %>
                     <tr>
-                        <td><%=  slide.id %></td>
+                        
                         <td><%=  image_tag slide.image_url(:thumb).to_s%></td>
                         <td><%= slide.title %></td>
                         <td><%= slide.text %></td>

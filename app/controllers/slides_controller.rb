@@ -50,8 +50,5 @@ class SlidesController < ApplicationController
   private
   def slide_params
     params.require(:slide).permit(:title, :text, :image, :service_id)
-
   end
-
-
 end

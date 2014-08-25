@@ -1,0 +1,366 @@
+#encoding: utf-8
+<%- model_class = Home -%>
+<div class="container content">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page"
+			>
+			<dl class="dl-horizontal">
+				
+				<dt><strong><%= model_class.human_attribute_name(:Logo) %>:</strong></dt>
+				<dd><%= image_tag @home.logo_url(:thumb).to_s %></dd></br>
+				<!-- Button trigger modal -->
+				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#myModal" value="Cambiar logo" type="button">
+				</dd></br></br>
+				<!-- end Button trigger modal -->
+				<!-- Modal logo -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+								<h4 class="modal-title" id="myModalLabel">Cambiar </h4>
+							</div>
+							<%= form_for @home, :html => {:multipart => true, id:"logo_df"}, remote: true, authenticity_token: true do |f| %>
+							<div class="modal-body">
+								
+								
+								<%= image_tag @home.logo_url(:thumb).to_s, id: "image_url" %></br></br>
+								<div class="button">
+									<div class="text">
+										Selecciona un archivo
+									</div>
+									<%= f.file_field :logo, data: {image: "image_url"}, class: "input_pluguin"  %>
+									
+								</div>
+								
+								
+								
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</button>
+								<%= f.button "Cargar",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
+								
+							</div>
+							
+						</div>
+						<% end %>
+					</div>
+				</div>
+				<!-- end Modal -->
+				<div class="reg-header">
+				</div>
+				
+				<dt><strong><%= model_class.human_attribute_name(:Imagen_uno) %>:</strong></dt>
+				<dd><%= image_tag @home.slider_image_one_url(:thumb).to_s, id: "slider_image_one_url" %></dd></br>
+				<!-- Button trigger modal  slider one -->
+				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_one" value="Cambiar imagen 1" type="button">
+				</dd></br></br>
+				<!-- end Button trigger modal  slider one -->
+				<!-- Modal slider one -->
+				<div class="modal fade" id="slider_image_one" tabindex="slider_image_one" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+								<h4 class="modal-title" id="myModalLabel">Editar imagen uno </h4>
+							</div>
+							<div class="modal-body">
+								<%= form_for @home, :html => {:multipart => true}, remote: true, authenticity_token: true do |f| %>
+								<%= image_tag @home.slider_image_one_url(:thumb).to_s, id: "image_one_slider" %></br></br>
+								<div class="button">
+									<div class="text">
+										Selecciona un archivo
+									</div>
+									<%= f.file_field :slider_image_one, data: {image: "image_one_slider"}, class: "input_pluguin"  %>
+								</div></br></br>
+								
+								<div class="control-group">
+									<%= f.label :imagen_uno, :class => 'control-label' %>
+									<div class="controls">
+										<%= f.text_field :slider_title_one, :class => 'text_field' %>
+									</div>
+								</div>
+								<div class="control-group">
+									<%= f.label :slider_text_one, :class => 'control-label' %>
+									
+									<div class="controls">
+										
+										<%= f.text_area :slider_text_one, :class => 'wysihtml5' %>
+										
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</button>
+								<%= f.button "Cargar",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
+							</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+				<!-- end Modal slider one -->
+				<!--  <dt><strong><%= model_class.human_attribute_name(:Slider_title_one) %>:</strong></dt>
+				<dd><%= @home.slider_title_one%></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:Slider_text_one) %>:</strong></dt>
+				<dd><%= @home.slider_text_one%></dd> -->
+				
+			</dl>
+			<div class="reg-header">
+			</div>
+			<dl class="dl-horizontal">
+				
+				<dt><strong><%= model_class.human_attribute_name(:Imagen_dos) %>:</strong></dt>
+				<dd><%= image_tag @home.slider_image_two_url(:thumb).to_s %></dd></br>
+				<!-- Button trigger modal  slider two-->
+				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_two" value="Cambiar imagen 2" type="button">
+				</dd></br></br>
+				<!-- end Button trigger modal  slider two-->
+				<!-- Modal slider two -->
+				<div class="modal fade" id="slider_image_two" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+								<h4 class="modal-title" id="myModalLabel">Editar imagen dos</h4>
+							</div>
+							<div class="modal-body">
+								<%= form_for @home, :html => {:multipart => true}, remote: true, authenticity_token: true do |f| %>
+								<%= image_tag @home.slider_image_two_url(:thumb).to_s, id: "image_two_slider" %></br></br>
+								<div class="button">
+									<div class="text">
+										Selecciona un archivo
+									</div>
+									<%= f.file_field :slider_image_two, data: {image: "image_two_slider"}, class: "input_pluguin" %>
+								</div></br></br>
+								
+								<div class="control-group">
+									<%= f.label :slider_title_two, :class => 'control-label' %>
+									<div class="controls">
+										<%= f.text_field :slider_title_two, :class => 'text_field' %>
+									</div>
+								</div>
+								<div class="control-group">
+									<%= f.label :Imagen_dos, :class => 'control-label' %>
+									
+									<div class="controls">
+										
+										<%= f.text_area :slider_text_two, :class => 'wysihtml5' %>
+										
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</button>
+								<%= f.button "Cargar",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
+							</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+				<!-- end Modal slider two -->
+				<!--
+				<dt><strong><%= model_class.human_attribute_name(:Slider_title_two) %>:</strong></dt>
+				<dd><%= @home.slider_title_one%></dd></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:Slider_text_two) %>:</strong></dt>
+				<dd><%= @home.slider_text_two%></dd> -->
+				
+			</dl>
+			<div class="reg-header">
+			</div>
+			<dl class="dl-horizontal">
+				
+				<dt><strong><%= model_class.human_attribute_name(:Imagen_tres) %>:</strong></dt>
+				<dd><%= image_tag @home.slider_image_three_url(:thumb).to_s %></dd></br>
+				
+				<!-- Button trigger modal  slider three-->
+				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#slider_image_three" value="Cambiar imagen 3" type="button">
+				</dd></br></br>
+				<!-- end Button trigger modal  slider three-->
+				<!-- Modal slider three -->
+				<div class="modal fade" id="slider_image_three" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+								<h4 class="modal-title" id="myModalLabel">Editar imagen tres </h4>
+							</div>
+							<div class="modal-body">
+								<%= form_for @home, :html => {:multipart => true}, remote: true, authenticity_token: true do |f| %>
+								<%= image_tag @home.slider_image_three_url(:thumb).to_s, id: "image_three_slider" %></br></br>
+								<div class="button">
+									<div class="text">
+										Selecciona un archivo
+									</div>
+									<%= f.file_field :slider_image_three, data: {image: "image_three_slider"}, class: "input_pluguin" %>
+								</div>
+								
+								</br></br>
+								
+								<div class="control-group">
+									<%= f.label :slider_title_three, :class => 'control-label' %>
+									<div class="controls">
+										<%= f.text_field :slider_title_three, :class => 'text_field' %>
+									</div>
+								</div>
+								<div class="control-group">
+									<%= f.label :slider_text_three, :class => 'control-label' %>
+									
+									<div class="controls">
+										
+										<%= f.text_area :slider_text_three, :class => 'wysihtml5' %>
+										
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</button>
+								<%= f.button "Cargar",class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
+							</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+				<!-- end Modal slider three -->
+				<!--  <dt><strong><%= model_class.human_attribute_name(:Slider_title_three) %>:</strong></dt>
+				<dd><%= @home.slider_title_one%></dd></dd></br>
+				<dt><strong><%= model_class.human_attribute_name(:Slider_text_three) %>:</strong></dt>
+				<dd><%= @home.slider_text_three%></dd>
+				
+			</dl> -->
+			<div class="reg-header">
+			</div>
+			<%= form_for @home,   :html => {:multipart => true}, data: true, authenticity_token: true do |f| %>
+			<%= f.text_field :show, value: true, type: "hidden", class: "disabled" %>
+			<div class="control-group">
+				<%= f.label :Titulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_promocional, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Descripción, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_area :text_promocional, :class => 'wysihtml5' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo_del_boton, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_button_promocional, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_history, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Descripción, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_area :text_history, :class => 'wysihtml5' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo_boton_historia, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_button_history, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_contact, :class => 'text_field' %>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<%= f.label :Dirección, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :address, :class => 'text_field' %>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<%= f.label :Teléfono_uno, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :telephone_one, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Teléfono_dos, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :telephone_two, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :fax, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :fax, :class => 'text_field' %>
+				</div>
+			</div></br>
+			<div class="control-group">
+				<%= f.label :Email, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :email, :class => 'text_field' %>
+				</div>
+			</div></br>
+			<div class="control-group">
+				<%= f.label :Titulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_recognition, :class => 'text_field' %>
+				</div>
+			</div></br>
+			<div class="control-group">
+				<%= f.label :Descripción, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_area :text_recognition, :class => 'wysihtml5' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_job, :class => 'text_field' %>
+				</div>
+			</div></br>
+			<div class="control-group">
+				<%= f.label :Descripción, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_area :text_job, :class => 'wysihtml5' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo_del_boton, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_button_job, :class => 'text_field' %>
+				</div>
+			</div></br>
+			<div class="control-group">
+				<%= f.label :Titulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_job, :class => 'text_field' %>
+				</div>
+			</div></br>
+			<div class="control-group">
+				<%= f.label :Descripción, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_area :text_office, :class => 'wysihtml5' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo_del_boton, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title_button_office, :class => 'text_field' %>
+				</div>
+			</div></br>
+			<div class="col-lg-3 text-right">
+				<%= f.submit "Guardar",class: 'btn-u btn-brd btn-brd-hover btn-u-blue'%>
+			</div>
+			<%= link_to "Cancelar", dashboard_path, class: 'btn-u btn-u-red' %>
+			<% end %></br></br>
+			
+			
+		</div>
+	</div>
+</div>

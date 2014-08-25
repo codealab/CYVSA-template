@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome !"
-      redirect_to @user
+      redirect_to dashboard_path
     else
       render 'new'
     end

@@ -13,7 +13,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th><%= model_class.human_attribute_name('#') %></th>
+                        
                         <th><%= model_class.human_attribute_name(:Icono) %></th>
                         <th><%= model_class.human_attribute_name(:Titulo) %></th>
                         <th><%= model_class.human_attribute_name(:Comentario) %></th>
@@ -24,7 +24,7 @@
                     
                     <% @services.each do |service| %>
                     <tr>
-                        <td><%=  service.id %></td>
+                        
                         <td><%= service.icon %></td>
                         <td><%= service.title %></td>
                         <td><%= service.content %></td>

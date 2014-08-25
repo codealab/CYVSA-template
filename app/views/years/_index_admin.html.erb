@@ -11,7 +11,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th><%= model_class.human_attribute_name('#') %></th>
+                        
                         <th><%= model_class.human_attribute_name(:Imagen) %></th>
                         <th><%= model_class.human_attribute_name(:Titulo) %></th>
                         <th><%= model_class.human_attribute_name(:Comentario) %></th>
@@ -23,7 +23,7 @@
                     
                     <% @years.each do |year| %>
                     <tr>
-                        <td><%=  year.id %></td>
+                       
                         <td><%=  image_tag year.image_url(:thumb).to_s%></td>
                         <td><%= year.title %></td>
                         <td><%= year.text %></td>

@@ -301,7 +301,7 @@
 <part>service_id</part>
 </key>
 </table>
-<table x="497" y="604" name="information">
+<table x="498" y="604" name="notice">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
