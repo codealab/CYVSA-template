@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  layout 'dashboard'
   before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
-  
+  before_action :admin_user,     only: [:edit, :update]
   def show
     @user = User.find(params[:id])
   end
@@ -30,16 +29,11 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome !"
-      redirect_to @user
+      redirect_to dashboard_path
     else
       render 'new'
     end
   end
-
-
- 
-
-
 
   private
 
@@ -59,4 +53,8 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
 end

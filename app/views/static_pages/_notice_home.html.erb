@@ -1,0 +1,31 @@
+<!--=== Parallax About Block ===-->
+
+<% Notice.all.each_with_index do |t, index| %>
+
+<div <% if (index+1)%2 == 0 %> class="parallax-bg parallaxBg1"  <% end %> >
+    <div class="container content parallax-about">
+        <div class="container content">
+            <div class="headline"><h2><%= t.title.to_s.html_safe  %></h2></div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="banner-info light margin-bottom-10">
+                    
+                    <div class="overflow-h">
+                        
+                        <p><%= t.text.to_s.html_safe%></p>
+                    </div>
+                </div>
+                
+                <div class="margin-bottom-20"></div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="<%= t.image %>" alt="">
+            </div>
+        </div>
+        
+        </div><!--/container-->
+    </div>
+    <% end %>
+    
+    <!--=== End Parallax About Block ===-->

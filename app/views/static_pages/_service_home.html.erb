@@ -1,0 +1,20 @@
+<!-- Service Blocks -->
+<div class="container content">
+<div class="headline"><h2>Que Hacemos</h2></div>
+    <div class="row margin-bottom-30">
+        <% Service.all.each do |t| %>
+        <div class="col-sm-4 ">
+            <div class="service">
+                <i class="fa <%= "#{t.icon}"%> service-icon"></i>
+                
+                <div class="desc">
+                    <%= t.title %>
+                    <p> <%=t.content.html_safe%></p>
+                </div>
+            </div>
+        </div>
+        <% end %>
+        
+    </div>
+</div>
+<!-- End Service Blokcs -->

@@ -1,0 +1,74 @@
+<!-- Service Blcoks -->
+<div class="wrapper">
+    
+    <div class="container content">
+        
+        
+        <div class="row margin-bottom-10">
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-u">
+                
+                    <h2 class="heading-md"> <%= link_to 'Inicio', edit_home_path(Home.first)%></h2>
+                   
+                    <p>Podras hacer cambios al modulo de inicio</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-blue">
+                    
+                    <h2 class="heading-md"><%= link_to 'Informativos', notices_path(@notice) %></h2>
+                    
+                    <p>Podras hacer cambios al modulo  Informstivo</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-dark">
+           
+                    <h2 class="heading-md"><%= link_to 'Historia', years_path(@year) %></h2>
+                    
+                    <p>Podras hacer cambios al modulo de year</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-red">
+                  
+                   <h2 class="heading-md"> <%= link_to 'Servicios', services_path(@service)%></h2>
+                    <p> Podras hacer cambios al modulo de Servicio</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row margin-bottom-10">
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-purple">
+                   
+                    <h2 class="heading-md">Proyectos</h2>
+                    <p>Podras hacer cambios al modulo de Proyecto</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-grey">
+                    
+                    <h2 class="heading-md">Reconocimientos</h2>
+                    <p>Podras hacer cambios al modulo de Reconocimiento</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-yellow">
+                    
+                    <h2 class="heading-md">Oficinas y Matto</h2>
+                    <p>Podras hacer cambios al modulo de Oficina y Matto</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="servive-block servive-block-dark-blue">            
+                    <h2 class="heading-md"><%= link_to 'Agregar usiario', signup_path(@user)%></h2>
+                    <p>Podras agregar usuarios solo siendo administrador</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- End Service Blcoks -->

@@ -1,0 +1,41 @@
+<!--=== Slider ===-->
+<div class="slider-inner">
+    <div id="da-slider" class="da-slider">
+        <div class="da-slide">
+            <h2><i> <%= slider(" Título de imagen.","titulo")  %></i></h2>
+            <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion") %></i></p>
+            <div class="da-img"><img class="img-responsive" src="<%= photo(1)%>"  alt=""></div>
+        </div>
+        <div class="da-slide">
+            <h2><i><%= slider("Título de imagen.","titulo")  %></i> </h2>
+            <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion") %></i> </p>
+            <div class="da-img"><img class="img-responsive" src="<%= photo(2) %>" alt=""></div>
+            
+        </div>
+        <div class="da-slide">
+            <h2><i><%= slider("Título de imagen.","titulo")%></i> </h2>
+            <p><i><%= slider("Ponga una descripción de la imagen  aquí","descripcion")%></i> </p>
+            <div class="da-img"><img src=" <%= photo(3) %> " alt="image01" /></div>
+        </div>
+        <div class="da-arrows">
+            <span class="da-arrows-prev"></span>
+            <span class="da-arrows-next"></span>
+        </div>
+    </div>
+</div><!--/slider-->
+    
+    <!--=== End Slider ===-->
+    <!--=== partial ===-->
+
+    <%= render partial: "static_pages/promocional_home" %>
+    <%= render partial: "static_pages/notice_home" %>
+    <%= render partial: "static_pages/historia_home" %>
+    <%= render partial: "static_pages/service_home" %>
+
+    <!--=== End Partia ===-->
+    
+    
+    
+    
+
+<!-- End Portfolio Sorting Blocks -->

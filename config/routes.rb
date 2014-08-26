@@ -1,21 +1,28 @@
 Template::Application.routes.draw do
-  resources :dashboards
+  resources :notices
+  resources :informations
+  resources :years
+  resources :slides
+  get "static_pages/index"
+  root "static_pages#cyvsa_home"
   resources :homes
   resources :users
+  resources :services
   resources :sessions, only: [:new, :create, :destroy]
-  #get "users/new"
   get "project/index"
   get "portfolio/index"
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/admin',   to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/signup',    to:     'users#new',                  via: 'get'
+  match '/admin',     to:     'sessions#new',               via: 'get'
+  match '/signout',   to:     'sessions#destroy',           via: 'delete'
+  match '/dashboard', to:  'sessions#dashboard',            via: 'get'
+  
   #devise_for :users
   #get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'homes#index'
+   #root 'homes#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

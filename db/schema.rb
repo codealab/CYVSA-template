@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801230307) do
+ActiveRecord::Schema.define(version: 20140825171608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,12 +47,26 @@ ActiveRecord::Schema.define(version: 20140801230307) do
     t.string   "slider_image_three"
     t.string   "slider_title_three"
     t.text     "slider_text_three"
-    t.text     "promocional"
-    t.string   "about"
+    t.string   "title_promocional"
+    t.text     "text_promocional"
+    t.string   "title_button_promocional"
+    t.string   "title_history"
+    t.text     "text_history"
+    t.string   "title_button_history"
+    t.string   "title_contact"
     t.string   "address"
-    t.integer  "telephone"
+    t.integer  "telephone_one"
+    t.integer  "telephone_two"
     t.integer  "fax"
     t.string   "email"
+    t.string   "title_recognition"
+    t.text     "text_recognition"
+    t.string   "title_office"
+    t.text     "text_office"
+    t.string   "title_button_office"
+    t.string   "title_job"
+    t.text     "text_job"
+    t.string   "title_button_job"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,6 +79,14 @@ ActiveRecord::Schema.define(version: 20140801230307) do
     t.string   "street"
     t.integer  "altitude"
     t.integer  "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notices", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -86,11 +108,11 @@ ActiveRecord::Schema.define(version: 20140801230307) do
     t.datetime "updated_at"
   end
 
-  create_table "time_lines", force: true do |t|
-    t.text     "content"
+  create_table "slides", force: true do |t|
     t.string   "title"
-    t.date     "date"
+    t.text     "text"
     t.string   "image"
+    t.integer  "service_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -102,9 +124,19 @@ ActiveRecord::Schema.define(version: 20140801230307) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_token"
+    t.boolean  "admin",           default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
+
+  create_table "years", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.date     "date"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

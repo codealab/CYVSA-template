@@ -1,0 +1,7 @@
+<% if current_user %>
+    <% if current_user.admin %>
+    <%= render "/years/index_admin" %>
+    <%end %>
+<% else %>
+    <%= render "/years/index_users" %>
+<% end %>

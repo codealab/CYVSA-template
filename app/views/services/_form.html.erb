@@ -1,0 +1,35 @@
+<div class="container content">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page">
+			<%= form_for @service, :html => { :class => 'form-horizontal' } do |f| %>
+			<div class="control-group">
+				<%= f.label :Icono, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :icon, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Titulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="field">
+				<%= f.label :Descrpcion %><br>
+				<%= f.text_area :content, :class => 'wysihtml5' %>
+			</div>
+			
+			<% if params[:action] == "new" %>
+			<div class="col-lg-3 text-right">
+				<%= f.submit "Crear", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
+			</div>
+			<% else %>
+			<div class="col-lg-3 text-right">
+				<%= f.submit "Guardar", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
+			</div>
+			<% end %>
+			<%= link_to "Cancelar", dashboard_path, class: 'btn-u btn-u-red'%>
+		</div>
+	</div>
+</div>
+<% end %>

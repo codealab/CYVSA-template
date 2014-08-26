@@ -6,25 +6,24 @@
                     <!-- About -->
                     <div class="headline"><h2>Redes sociales</h2></div>  
                      <ul class="social-icons">
-                        <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
                         <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
                         <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
-                        <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
-                        <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
                         <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
-                        <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
                     </ul>
                     <!-- End Social Links -->   
                     <!-- End About -->
 
                     <!-- Monthly Newsletter -->
-                    <div class="headline"><h2>Suscribete a nuestras noticias </h2></div> 
-                    <p>Suscribete para recibir el boletin con las noticias de CYVSA</p>
+                    <div class="headline"><h2><%= job("Ponga su título aquí.","titulo") %> </h2></div> 
+                    <p><%= job("Ponga la información acerca de la bolsa de trabajo","descripcion") %></p>
+                    <button class="btn-u btn-u-blue" type="button"> <%= job("Título de boton","boton") %></button> 
+                    </br></br>
+                   
                     <form class="footer-subsribe">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Email Address">                            
                             <span class="input-group-btn">
-                                <button class="btn-u" type="button">Subscribe</button>
+                                <button class="btn-u" type="button">Subscribete</button>
                             </span>
                         </div>                  
                     </form>                         
@@ -34,7 +33,7 @@
                 <div class="col-md-4 md-margin-bottom-40">
                     <!-- Recent Blogs -->
                     <div class="posts">
-                        <div class="headline"><h2>RECONICIMIENTOS IMEI</h2></div>
+                        <div class="headline"><h2><%= recognition %></h2></div>
                         <dl class="dl-horizontal">
                             <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
                             <dd>
@@ -59,19 +58,25 @@
 
                 <div class="col-md-4">
                     <!-- Contact Us -->
-                    <div class="headline"><h2>Contactanos</h2></div> 
+                    <div class="headline"><h2><%= about_us("Ponga su título aquí.","about")  %></h2></div> 
                     <address class="md-margin-bottom-40">
                     <p> Corporativo: CYVSA</p>
-                         <p>Dirección: <%= about_us("Escribe la direccion de la empresa","direccion")%><br /></p>
+                         <p>Dirección: <%= about_us("Escribe la direccion de la empresa","address")%><br /></p>
                             
-                            <p>Teléfono: <%= about_us("Escribe el telefono de la empresa","telefono")%><br /></p>
+                            <p>Teléfono 1: <%= about_us("Escribe el telefono de la empresa","phone_one")%><br /></p>
+                            <p>Teléfono 2: <%= about_us("Escribe el telefono de la empresa","phone_two")%><br /></p>
                             <p>Fax: <%= about_us("Escribe el fax de la empresa","fax")%><br /></p>
-                            <p>Email: <%= about_us("Escribe el Eamil de la empresa","email")%></p>
+                            <p>Email: <%= link_to about_us("Escribe el Eamil de la empresa","email")%></p>
                     </address>
                     <!-- End Contact Us -->
 
                     <!-- Social Links -->
-                    <div class="headline"><h2>Oficinas y Centro de Mantenimiento</h2></div> 
+                    <div class="headline"><h2><%= office("Ponga su título aquí","titulo")  %></h2></div>
+                    <p> <%= office("Ponga su descripción aquí","drescripcio") %></p> 
+                    
+                     <button class="btn btn-block btn-googleplus rounded">
+                      <i class="fa fa-map-marker"></i> Google Maps
+                    </button>
                    
                 </div><!--/col-md-4-->
             </div>
