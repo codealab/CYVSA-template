@@ -6,8 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 	Home.create(
-
-
 	logo: '',
 	slider_image_one: '',
 	slider_title_one: 'Lorem Ipsum',
