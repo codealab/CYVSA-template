@@ -130,11 +130,10 @@
 <part>id</part>
 </key>
 </table>
-<table x="300" y="147" name="services">
+<table x="288" y="283" name="services">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="slides" row="service_id" />
-</row>
+<default>NULL</default></row>
 <row name="icon" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
@@ -197,7 +196,7 @@
 <part>division_id</part>
 </key>
 </table>
-<table x="566" y="386" name="year">
+<table x="565" y="386" name="year">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -211,6 +210,9 @@
 <datatype>DATE</datatype>
 <default>NULL</default></row>
 <row name="image" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="type" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
@@ -278,27 +280,6 @@
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
-</key>
-</table>
-<table x="304" y="324" name="slides">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="title" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="text" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="image" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="service_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-<part>service_id</part>
 </key>
 </table>
 <table x="498" y="604" name="notice">

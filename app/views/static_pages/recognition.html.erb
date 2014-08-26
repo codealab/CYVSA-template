@@ -1,0 +1,34 @@
+
+<div class="parallax-team parallaxBg">
+        <div class="container content">
+           
+            <div class="title-box-v2">
+
+        
+
+                <h2><div class="title-box-text">RECONOCIMIENTOS<span class="color-green">IMEI</span> </div></h2>
+                <p>Cumpliendo con la VISIÓN de crecer y servir, CYVSA contruye día a día una trayectoria de exito junto con sus clientes.</p>
+            </div>
+            <% @years.all.each do |y| %>
+            <div class="row">
+                <!-- Team v2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-v2">
+                        <img class="img-responsive" src="<%= y.image %>" alt="">
+                        <div class="inner-team">
+
+                        <small class="color-green"><i class="fa fa-history"></i><%= y.date.strftime("%Y") %></small>
+
+                           
+                            <p><%= y.text.to_s.html_safe %></p>
+                            <hr>    
+                            
+                        </div>
+                    </div>
+                </div>
+               
+                <% end %>
+            </div>
+
+        </div>   
+    </div>
