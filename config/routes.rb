@@ -2,8 +2,8 @@ Template::Application.routes.draw do
   resources :notices
   resources :informations
   resources :years
-  resources :slides
   get "static_pages/index"
+  get "static_pages/recognition"
   root "static_pages#cyvsa_home"
   resources :homes
   resources :users

@@ -3,9 +3,21 @@
     <div class="panel panel-grey margin-bottom-40">
         <div class="panel-heading">
             <div class="pull-right">
-                <%= link_to "Nuevo", new_year_path, :class => 'btn btn-success btn-xs'%>
+
+            <% if params[:tipo] == 'Reconocimiento' %>
+            <%= link_to 'Neuvo Reconocimiento', new_year_path %>
+            
+            <% else %>
+              <%= link_to 'Historia', :controller => :years, :action => :new, tipo: "Historia" %>
+               <% end %>
+               
             </div>
-            <h3 class="panel-title"><i class="fa fa-globe"></i> year</h3>
+            <% if params[:tipo] == 'Reconocimiento' %>
+            <h3 class="panel-title"><i class="fa fa-globe"></i> Reconocimientos</h3>
+                    
+            <% else %>
+                    <h3 class="panel-title"><i class="fa fa-globe"></i> Historia</h3>
+            <% end %>
         </div>
         <div class="panel-body">
             <table class="table table-bordered">
@@ -13,8 +25,14 @@
                     <tr>
                         
                         <th><%= model_class.human_attribute_name(:Imagen) %></th>
-                        <th><%= model_class.human_attribute_name(:Titulo) %></th>
+                        
+                          <th><%= model_class.human_attribute_name(:Titulo) %></th>
+                       
+                        <% if params[:tipo] == 'Reconocimiento' %>
+
+                        <% else %>
                         <th><%= model_class.human_attribute_name(:Comentario) %></th>
+                         <% end %>
                         <th><%= model_class.human_attribute_name(:Año) %></th>
                         <th><%= model_class.human_attribute_name(:Acciones) %></th>
                     </tr>
@@ -25,8 +43,14 @@
                     <tr>
                        
                         <td><%=  image_tag year.image_url(:thumb).to_s%></td>
-                        <td><%= year.title %></td>
+
+                           <td><%= year.title %></td>
+                        
+                       <% if params[:tipo] == 'Reconocimiento' %>
+
+                        <% else %>
                         <td><%= year.text %></td>
+                        <% end %>
                         <td><%= year.date.strftime("%Y") %></td>
                         
                         <td>
