@@ -27,7 +27,7 @@
                        
                         <td><%=  image_tag notice.image_url(:thumb).to_s%></td>
                         <td><%= notice.title %></td>
-                        <td><%= notice.text %></td>
+                        <td><%= notice.text.to_s.html_safe %></td>
                         
                         
                         <td>

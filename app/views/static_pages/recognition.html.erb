@@ -1,34 +1,48 @@
-
 <div class="parallax-team parallaxBg">
-        <div class="container content">
-           
-            <div class="title-box-v2">
-
-        
-
-                <h2><div class="title-box-text">RECONOCIMIENTOS<span class="color-green">IMEI</span> </div></h2>
-                <p>Cumpliendo con la VISIÓN de crecer y servir, CYVSA contruye día a día una trayectoria de exito junto con sus clientes.</p>
-            </div>
-            <% @years.all.each do |y| %>
-            <div class="row">
+    <div class="container content">
+        <div class="title-box-v2">
+            <h2><div class="title-box-text">RECONOCIMIENTOS <span class="color-green">IMEI</span> </div></h2>
+            <p>Cumpliendo con la VISIÓN de crecer y servir, CYVSA contruye día a día una trayectoria de exito junto con sus clientes.</p>
+        </div>
+        <div class="title-box-v2">
+            <div class="headline"><span class="color-green"><h2>RECONOCIMIENTOS IMEI</h2></span></div>
+        </div>
+        <div class="row">
+            <% reconocimientos = [] %>
+            <% lote = [] %>
+            <% lote<<lote %>
+            <% @years.each_with_index do |reconocimiento, index| %>
+            <% if (index+1)%4==1 %>
+                <% lote = [] %>
+                <% reconocimientos << lote %>
+            <% end %>
+            <% lote << reconocimiento %>
+            <% end %>
+            <% reconocimientos.each do |lote| %>
+            <div class="col-md-12 ">
+                <% lote.each do |y| %>
+                
                 <!-- Team v2 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="team-v2">
+                        
                         <img class="img-responsive" src="<%= y.image %>" alt="">
                         <div class="inner-team">
-
-                        <small class="color-green"><i class="fa fa-history"></i><%= y.date.strftime("%Y") %></small>
-
-                           
-                            <p><%= y.text.to_s.html_safe %></p>
-                            <hr>    
+                            <small class="color-green"><i class="fa fa-history"></i><%= y.date.strftime("%Y") %></small>
+                            <h2><%= y.title.to_s.html_safe %></h2>
                             
+                            <hr>
+                            <ul class="list-inline team-social">
+                                
+                            </ul>
                         </div>
+                        
                     </div>
                 </div>
-               
+                <!-- End Team v2 -->
                 <% end %>
             </div>
-
-        </div>   
+            <% end %>
+        </div>
     </div>
+</div>

@@ -6,6 +6,6 @@ class StaticPagesController < ApplicationController
 	end
 
 	def recognition
-		@years = Year.order(:date )
+		 @years = Year.order(:date).where(:tipo => 'Reconocimiento')
 	end
 end
