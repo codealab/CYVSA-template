@@ -35,23 +35,15 @@
                     <div class="posts">
                         <div class="headline"><h2><%= recognition %></h2></div>
                         <dl class="dl-horizontal">
-                            <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+                        <%  Year.order('random()').limit(3).where(:tipo => 'Reconocimiento').each do |t| %>
+                            <dt><a href="#"><img src="<%= t.image %>" alt="" /></a></dt>
                             <dd>
-                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
+                            <i class="fa fa-history"></i> <%= t.date.strftime("%Y") %>
+                                <p><%= t.title %></p> 
                             </dd>
+                            <% end %>
                         </dl>
-                        <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
-                            <dd>
-                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                            </dd>
-                        </dl>
-                        <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
-                            <dd>
-                                <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                            </dd>
-                        </dl>
+                       
                     </div>
                     <!-- End Recent Blogs -->                    
                 </div><!--/col-md-4-->
