@@ -8292,20 +8292,6 @@ a.list-group-item.active > .badge,
     max-width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-    .jumbotron {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-    .container .jumbotron {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-    .jumbotron h1,
-    .jumbotron .h1 {
-        font-size: 63px;
-    }
-}
 
 .thumbnail {
     display: block;
@@ -9703,27 +9689,6 @@ button.close {
 
 .carousel-caption .btn {
     text-shadow: none;
-}
-
-@media screen and (min-width: 768px) {
-    .carousel-control .glyphicons-chevron-left,
-    .carousel-control .glyphicons-chevron-right,
-    .carousel-control .icon-prev,
-    .carousel-control .icon-next {
-        width: 30px;
-        height: 30px;
-        margin-top: -15px;
-        margin-left: -15px;
-        font-size: 30px;
-    }
-    .carousel-caption {
-        left: 20%;
-        right: 20%;
-        padding-bottom: 30px;
-    }
-    .carousel-indicators {
-        bottom: 20px;
-    }
 }
 
 .clearfix:before, .clearfix:after {
