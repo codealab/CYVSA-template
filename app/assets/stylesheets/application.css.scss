@@ -70,11 +70,12 @@ input {
 
 #error_explanation {
     color: #f00;
+}
     ul {
         list-style: none;
         margin: 0 0 18px 0;
     }
-}
+
 
 .field_with_errors {}
 
@@ -806,22 +807,6 @@ a.btn-u-xs {
 
 .btn-group > .btn-u:first-child {
     margin-left: 0;
-}
-
-/*For FF Only*/
-@-moz-document url-prefix() {
-    .footer-subsribe .btn-u {
-        padding-bottom: 4px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    @-moz-document url-prefix() {
-        .btn-u {
-            padding-bottom: 6px;
-        }
-    }
 }
 
 /*Buttons Color*/
