@@ -26,6 +26,7 @@ end
 group :development,:test do
   gem "mini_magick"
   gem "better_errors"
+  gem "binding_of_caller"
   gem 'rspec-rails', '2.13.1'
   gem 'shoulda-matchers', '~> 2.6.2'
   gem 'shoulda-matchers-callbacks', '~> 0.0.1'
