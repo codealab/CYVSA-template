@@ -14,7 +14,7 @@ Template::Application.routes.draw do
   match '/signup',    to:     'users#new',                  via: 'get'
   match '/admin',     to:     'sessions#new',               via: 'get'
   match '/signout',   to:     'sessions#destroy',           via: 'delete'
-  match '/dashboard', to:  'sessions#dashboard',            via: 'get'
+  match '/dashboard', to:  'homes#dashboard',            via: 'get'
   
   #devise_for :users
   #get "home/index"

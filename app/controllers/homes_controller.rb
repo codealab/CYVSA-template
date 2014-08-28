@@ -1,5 +1,7 @@
 class HomesController < ApplicationController
-
+  before_action :signed_in_user
+  def dashboard
+  end
   def edit
     @home = Home.find(params[:id])
 

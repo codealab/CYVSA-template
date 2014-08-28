@@ -13,12 +13,13 @@ class SessionsController < ApplicationController
     end
   end
 
-  def dashboard
-  end
+  
 
 
   def destroy
     sign_out
     redirect_to root_url
   end
+
+
 end

@@ -28,7 +28,8 @@ module SessionsHelper
   def signed_in_user
     unless signed_in?
       store_location
-      redirect_to signin_url, notice: "Please sign in."
+      flash[:danger] = "Lo sentimos debes ser administrador"
+      redirect_to root_path
     end
   end
 

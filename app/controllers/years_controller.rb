@@ -1,5 +1,5 @@
 class YearsController < ApplicationController
-
+	before_action :signed_in_user	
 	def index
 		if params[:tipo] 
 			@years = Year.order(:date).where(:tipo => 'Reconocimiento')
