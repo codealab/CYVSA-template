@@ -33,7 +33,7 @@
 								
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</button>
+								<div type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</div>
 								<%= f.button "Cargar", class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
 								
 							</div>
@@ -81,9 +81,9 @@
 				<div class="controls">
 
 				<% if params[:tipo] %>
-					<%= f.text_field :tipo, value: 'Historia',hidden: true %>
+					<%= f.text_field :tipo, value: 'Historia'%>
 					<% else %>
-					<%= f.text_field :tipo, value: 'Reconocimiento',hidden: true %>
+					<%= f.text_field :tipo, value: 'Reconocimiento' %>
 					<% end %>
 				</div></br></br>
 				

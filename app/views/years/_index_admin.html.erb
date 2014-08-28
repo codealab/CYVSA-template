@@ -12,6 +12,7 @@
                <% end %>
                
             </div>
+            
             <% if params[:tipo] == 'Reconocimiento' %>
             <h3 class="panel-title"><i class="fa fa-globe"></i> Reconocimientos</h3>
                     
@@ -49,7 +50,7 @@
                        <% if params[:tipo] == 'Reconocimiento' %>
 
                         <% else %>
-                        <td><%= year.text %></td>
+                        <td class="col-sm-8"><%= year.text %></td>
                         <% end %>
                         <td><%= year.date.strftime("%Y") %></td>
                         

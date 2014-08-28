@@ -28,7 +28,8 @@ class YearsController < ApplicationController
 		@year = Year.new(year_params)
 		if @year.save
 			flash[:success] = "cargado exitosamente."
-     render 'edit'
+
+     redirect_to  edit_year_path(@year)
 		else
 			render :action => 'new'
 		end
