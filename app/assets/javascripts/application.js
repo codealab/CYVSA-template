@@ -330,8 +330,12 @@ var App = function () {
 
 $(document).ready(function($) {
     $(".input_pluguin").imagePreview();
-    /*$("#home_slider_image_one").imagePreview();*/
-
+   
+    
+});
+$(document).ready(function($) {
+    $(".historia_image").imagePreview();
+   
     
 });
 

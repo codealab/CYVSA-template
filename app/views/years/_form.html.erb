@@ -2,104 +2,68 @@
 <div class="container content">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page">
-			<dl class="dl-horizontal">
-				
-				<dt><strong><%= model_class.human_attribute_name(:Imagen) %>:</strong></dt>
-				<dd><%= image_tag @year.image_url(:thumb).to_s %></dd></br>
-				<!-- Button trigger modal -->
-				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#myModal" value="Agregar imagen" type="button">
-				</dd></br></br>
-				<!-- end Button trigger modal -->
-				<!-- Modal logo -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-								<h4 class="modal-title" id="myModalLabel">Cambiar imagen</h4>
-							</div>
-							<%= form_for @year, :html => {:multipart => true, id:"logo_df"}, remote: true, authenticity_token: true do |f| %>
-							<div class="modal-body">
-								
-								
-								<%= image_tag @year.image_url(:thumb).to_s, id: "image_url" %></br></br>
-								<div class="button">
-									<div class="text">
-										Selecciona un archivo
-									</div>
-									<%= f.file_field :image, data: {image: "image_url"}, class: "input_pluguin"  %>
-									
-								</div>
-								
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</button>
-								<%= f.button "Cargar", class: 'btn-u btn-brd btn-brd-hover btn-u-blue' %>
-								
-							</div>
-							
-						</div>
-						<% end %>
-					</div>
-				</div>
-				<!-- end Modal -->
-				
-			</dl>
-			<div class="reg-header">
-			</div>
+			
 			
 			<%= form_for @year, :html => {:multipart => true, :class => 'form-horizontal'} do |f| %>
 			<%= render 'shared/error_messages', object: f.object %>
-			
+			<dl class="dl-horizontal">
+				<dt><strong><%= model_class.human_attribute_name(:Imagen) %>:</strong></dt>
+				<dd><%= image_tag @year.image_url(:thumb).to_s, id: "image_url" %></dd></br>
+				
+				<div class="button">
+					<div class="text">
+						Selecciona un archivo
+					</div>
+					<%= f.file_field :image, data: {image: "image_url"}, class: "input_pluguin"  %>
+				</div>
+			</dl></dd></br>
+			<div class="reg-header">
+			</div>
 			<div class="control-group">
 				<%= f.label :Titlulo, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.text_field :title, :class => 'text_field' %>
 				</div>
 			</div>
-
-			<% if params[:tipo] == "Historia" %>
+			<% if params[:tipo]  %>
 			<div class="control-group">
 				<%= f.label :Descripcion, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.text_area :text, :class => 'wysihtml5' %>
 				</div>
 			</div>
-			<% else %>
 			
 			<% end %>
-
-
 			<div class="control-group">
 				<%= f.label :Fecha, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.date_select :date, :start_year=>1900 %>
 				</div>
-
 				<div class="control-group">
-				
-				<div class="controls">
-
-				<% if params[:tipo] %>
-					<%= f.text_field :tipo, value: 'Historia',hidden: true %>
-					<% else %>
-					<%= f.text_field :tipo, value: 'Reconocimiento',hidden: true %>
-					<% end %>
-				</div></br></br>
-				
-			<% if params[:action] == "new" %>
+					
+					<div class="controls">
+						<% if params[:action] != "edit"  %>
+						
+							<% if params[:tipo] %>
+									<%= f.text_field :tipo, value: 'Historia', hidden: true%>
+							<% else %>
+									<%= f.text_field :tipo, value: 'Reconocimiento', hidden: true %>
+							<% end %>
+						<% end %>
+					</div></br></br>
+					
+					<% if params[:action] == "new" %>
 					<div class="col-lg-3 text-right">
 						<%= f.submit "Crear", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
 					</div>
-			<% else %>
+					<% else %>
 					<div class="col-lg-3 text-right">
 						<%= f.submit "Guardar", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
 					</div>
-			<% end %>
-
-			<%= link_to "Cancelar", dashboard_path, class: 'btn-u btn-u-red'%>
-			
-			<% end %>
+					<% end %>
+					<%= link_to "Cancelar", dashboard_path, class: 'btn-u btn-u-red'%>
+					
+					<% end %>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>

@@ -36,3 +36,11 @@
 	title_job: 'Lorem Ipsum',
 	text_job: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
 	title_button_job: '')
+
+admin = User.create(
+    :name => "Codealab",
+    :email => "codealab@gmail.com",
+    :password => "1234567890",
+    :password_confirmation => "1234567890",
+    admin: true
+)

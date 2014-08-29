@@ -2,21 +2,20 @@
 <div class="container content">
     <div class="panel panel-grey margin-bottom-40">
         <div class="panel-heading">
-            <div class="pull-right">
-
-            <% if params[:tipo] == 'Reconocimiento' %>
-            <%= link_to 'Neuvo Reconocimiento', new_year_path %>
-            
-            <% else %>
-              <%= link_to 'Historia', :controller => :years, :action => :new, tipo: "Historia" %>
-               <% end %>
-               
+            <div class="pull-right " >
+                <% if params[:tipo] == 'Reconocimiento' %>
+                <%= link_to 'Neuvo Reconocimiento', new_year_path,  tipo: "Reconocimiento", class: "btn btn-success btn-xs" %>
+                
+                <% else %>
+                <%= link_to 'Historia', new_year_path(tipo: "Historia") , class: "btn btn-success btn-xs" %>
+                <% end %>
+                
             </div>
             <% if params[:tipo] == 'Reconocimiento' %>
             <h3 class="panel-title"><i class="fa fa-globe"></i> Reconocimientos</h3>
-                    
+            
             <% else %>
-                    <h3 class="panel-title"><i class="fa fa-globe"></i> Historia</h3>
+            <h3 class="panel-title"><i class="fa fa-globe"></i> Historia</h3>
             <% end %>
         </div>
         <div class="panel-body">
@@ -26,13 +25,12 @@
                         
                         <th><%= model_class.human_attribute_name(:Imagen) %></th>
                         
-                          <th><%= model_class.human_attribute_name(:Titulo) %></th>
-                       
+                        <th><%= model_class.human_attribute_name(:Titulo) %></th>
+                        
                         <% if params[:tipo] == 'Reconocimiento' %>
-
                         <% else %>
                         <th><%= model_class.human_attribute_name(:Comentario) %></th>
-                         <% end %>
+                        <% end %>
                         <th><%= model_class.human_attribute_name(:Año) %></th>
                         <th><%= model_class.human_attribute_name(:Acciones) %></th>
                     </tr>
@@ -41,22 +39,26 @@
                     
                     <% @years.each do |year| %>
                     <tr>
-                       
-                        <td><%=  image_tag year.image_url(:thumb).to_s%></td>
-
-                           <td><%= year.title %></td>
                         
-                       <% if params[:tipo] == 'Reconocimiento' %>
-
+                        <td><%=  image_tag year.image_url(:thumb).to_s%></td>
+                        <td><%= year.title %></td>
+                        
+                        <% if params[:tipo] == 'Reconocimiento' %>
                         <% else %>
-                        <td><%= year.text %></td>
+                        <td class="col-sm-6"><%= year.text.to_s.html_safe %></td>
                         <% end %>
                         <td><%= year.date.strftime("%Y") %></td>
                         
                         <td>
+                            <% if params[:tipo] %>
+                            <%= link_to "Editar",  edit_year_path(year), :class => 'btn btn-warning btn-xs' %>
                             
-                            <%= link_to "Editar",  edit_year_path(year), :class => 'btn btn-warning btn-xs'%>
-
+                            <% else %>
+                            <%= link_to "Editar",  edit_year_path(year,  tipo: "Historia"), class: 'btn btn-warning btn-xs' %>
+                            <% end %>
+                            
+                            
+                            
                             <%= link_to "borrar", year_path(year),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
                             
                         </td>

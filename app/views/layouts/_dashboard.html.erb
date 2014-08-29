@@ -11,12 +11,12 @@
         
         
         <% if signed_in? %>
-            <li>Hola: <%= current_user.name%></li>
+        <li>Hola: <%= current_user.name%></li>
             <% if current_user %>
                 <% if current_user.admin %>
                     <li><%= link_to "Editar cuenta", edit_user_path(current_user) %></li>
                 <% end %>
-        <% else %>
+            <% else %>
         <% end %>
         <li>
             <%= link_to "Salir del administrador", signout_path, method: "delete" %>

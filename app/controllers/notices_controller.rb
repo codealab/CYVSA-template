@@ -1,15 +1,11 @@
 class NoticesController < ApplicationController
+	before_action :signed_in_user
 	def index
 		@notices = Notice.all
 	end
-
-
-
 	def new
 		@notice = Notice.new
 	end
-
-
 	def create
 		@notice = Notice.new(notice_params)
 		if @notice.save
@@ -24,8 +20,6 @@ class NoticesController < ApplicationController
 	def edit
 		@notice = Notice.find(params[:id])
 	end
-
-
 	def update
 		@notice = Notice.find(params[:id])
 		if @notice.update_attributes(notice_params)
@@ -42,8 +36,6 @@ class NoticesController < ApplicationController
 		flash[:success] = "Borrado exitosamente."
 		redirect_to @notice
 	end
-
-
 	private
 	def notice_params
 		params.require(:notice).permit([:title,:text,:image])

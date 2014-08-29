@@ -8,4 +8,7 @@ class StaticPagesController < ApplicationController
 	def recognition
 		 @years = Year.order(:date).where(:tipo => 'Reconocimiento')
 	end
+
+
+
 end

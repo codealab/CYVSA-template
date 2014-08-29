@@ -1,4 +1,4 @@
-<%- model_class = Year -%>
+<%- model_class = Notice -%>
 <div class="container content">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page">
@@ -6,6 +6,7 @@
 				
 				<dt><strong><%= model_class.human_attribute_name(:Imagen) %>:</strong></dt>
 				<dd><%= image_tag @notice.image_url(:thumb).to_s %></dd></br>
+				
 				<!-- Button trigger modal -->
 				<dd><input class="btn-u btn-u-light-green btn-md col-md-3 " data-toggle="modal" data-target="#myModal" value="Agregar imagen" type="button">
 				</dd></br></br>
@@ -64,17 +65,16 @@
 				</div>
 			</div>
 			</br></br>
-				
+			
 			<% if params[:action] == "new" %>
-					<div class="col-lg-3 text-right">
-						<%= f.submit "Crear", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
-					</div>
+			<div class="col-lg-3 text-right">
+				<%= f.submit "Crear", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
+			</div>
 			<% else %>
-					<div class="col-lg-3 text-right">
-						<%= f.submit "Guardar", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
-					</div>
+			<div class="col-lg-3 text-right">
+				<%= f.submit "Guardar", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
+			</div>
 			<% end %>
-
 			<%= link_to "Cancelar", dashboard_path, class: 'btn-u btn-u-red'%>
 			
 			<% end %>

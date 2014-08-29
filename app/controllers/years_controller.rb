@@ -1,18 +1,17 @@
 class YearsController < ApplicationController
-
 	def index
-		if params[:tipo] 
+		if params[:tipo]
 			@years = Year.order(:date).where(:tipo => 'Reconocimiento')
-						
-				else
-						
+
+		else
+
 			@years = Year.order(:date).where(:tipo => 'Historia')
-			end	
+		end
 	end
 
 
 	def index_admin
-		
+
 	end
 
 	def show
@@ -28,7 +27,14 @@ class YearsController < ApplicationController
 		@year = Year.new(year_params)
 		if @year.save
 			flash[:success] = "cargado exitosamente."
-     render 'edit'
+
+				if @year.tipo == 'Reconocimiento'
+					redirect_to years_path(tipo: 'Reconocimiento')
+					
+				else
+				redirect_to years_path
+				end
+
 		else
 			render :action => 'new'
 		end
@@ -45,10 +51,10 @@ class YearsController < ApplicationController
 		if @year.update_attributes(year_params)
 			flash[:success]= "creada exitosamente"
 			if @year.tipo == 'Historia'
-			redirect_to years_url
-		else
-			redirect_to years_url(tipo: 'Reconocimiento')
-		end
+				redirect_to years_url
+			else
+				redirect_to years_url(tipo: 'Reconocimiento')
+			end
 
 		else
 			render 'edit'
