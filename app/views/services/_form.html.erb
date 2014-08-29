@@ -6,7 +6,8 @@
 			<div class="control-group">
 				<%= f.label :Icono, :class => 'control-label' %>
 				<div class="controls">
-					<%= f.text_field :icon, :class => 'text_field' %>
+                        <i class= "color-blue" id="icono-show"></i>
+					<%= f.text_field :icon, :class => 'text_field', id: "service_icon",hidden: true %>
 				</div>
 			</div>
 			<div class="control-group">
@@ -1517,11 +1518,4 @@
 </div>
     </div>
 
-     <script>
-      $(".icon-select").on("click",function(){
-      
-      var icono = $(this).find("i").attr("class");
-      $("#service_icon").val(icono);
-      $("#icon-service").modal("hide");
-});
-      </script>
+  

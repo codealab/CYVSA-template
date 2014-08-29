@@ -2,23 +2,23 @@ class ServicesController < ApplicationController
   before_action :signed_in_user
   def index
     @services = Service.all
-    
+
   end
 
   def show
-  @service = Service.find(params[:id])
-    
+    @service = Service.find(params[:id])
+
   end
 
   def new
     @service = Service.new
   end
 
-   def create
+  def create
     @service = Service.new(service_params)
     if @service.save
       flash[:success] = "Creado exitosamente."
-     redirect_to services_url
+      redirect_to services_url
     else
       render :action => 'new'
     end

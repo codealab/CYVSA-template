@@ -41,6 +41,6 @@ admin = User.create(
     :name => "Codealab",
     :email => "codealab@gmail.com",
     :password => "1234567890",
-    :password_confirmation => "1234567890"
+    :password_confirmation => "1234567890",
+    admin: true
 )
-admin.toggle!(:admin)
