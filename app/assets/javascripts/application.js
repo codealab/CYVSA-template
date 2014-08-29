@@ -26,8 +26,8 @@
 */
 $(function() {
     $(document).on('page:load', function(){
-  window['rangy'].initialized = false
-})
+        window['rangy'].initialized = false
+    })
 });
 
 var App = function () {
@@ -333,11 +333,7 @@ $(document).ready(function($) {
    
     
 });
-$(document).ready(function($) {
-    $(".historia_image").imagePreview();
-   
-    
-});
+
 
 
     
