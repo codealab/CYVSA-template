@@ -65,7 +65,13 @@ class YearsController < ApplicationController
 		@year = Year.find(params[:id])
 		@year.destroy
 		flash[:success] = "Borrado exitosamente."
-		redirect_to @year
+
+				if @year.tipo == 'Reconocimiento'
+					redirect_to years_path(tipo: 'Reconocimiento')
+					
+				else
+				redirect_to years_path
+				end
 	end
 
 	private
