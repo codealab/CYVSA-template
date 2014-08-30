@@ -20,7 +20,7 @@
 								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
 								<h4 class="modal-title" id="myModalLabel">Cambiar </h4>
 							</div>
-							<%= form_for @home, :html => {:multipart => true, id:"logo_df"}, remote: true, authenticity_token: true do |f| %>
+							<%= form_for @home, :html => {:multipart => true, id:"logo_df"}, authenticity_token: true do |f| %>
 							<div class="modal-body">
 								
 								
@@ -66,7 +66,7 @@
 								<h4 class="modal-title" id="myModalLabel">Editar imagen uno </h4>
 							</div>
 							<div class="modal-body">
-								<%= form_for @home, :html => {:multipart => true}, remote: true, authenticity_token: true do |f| %>
+								<%= form_for @home, :html => {:multipart => true},  authenticity_token: true do |f| %>
 								<%= image_tag @home.slider_image_one_url(:thumb).to_s, id: "image_one_slider" %></br></br>
 								<div class="button">
 									<div class="text">
@@ -125,7 +125,7 @@
 								<h4 class="modal-title" id="myModalLabel">Editar imagen dos</h4>
 							</div>
 							<div class="modal-body">
-								<%= form_for @home, :html => {:multipart => true}, remote: true, authenticity_token: true do |f| %>
+								<%= form_for @home, :html => {:multipart => true},  authenticity_token: true do |f| %>
 								<%= image_tag @home.slider_image_two_url(:thumb).to_s, id: "image_two_slider" %></br></br>
 								<div class="button">
 									<div class="text">
@@ -186,7 +186,7 @@
 								<h4 class="modal-title" id="myModalLabel">Editar imagen tres </h4>
 							</div>
 							<div class="modal-body">
-								<%= form_for @home, :html => {:multipart => true}, remote: true, authenticity_token: true do |f| %>
+								<%= form_for @home, :html => {:multipart => true},  authenticity_token: true do |f| %>
 								<%= image_tag @home.slider_image_three_url(:thumb).to_s, id: "image_three_slider" %></br></br>
 								<div class="button">
 									<div class="text">

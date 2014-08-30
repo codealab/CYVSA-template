@@ -3,25 +3,23 @@ class HomesController < ApplicationController
   def dashboard
   end
   def edit
+
     @home = Home.find(params[:id])
 
   end
 
   def update
-
+puts "xxxxxxxxxxxxxxxxxxxxxxxxxx"
     @home = Home.find(params[:id])
     if @home.update_attributes(home_params)
-      flash[:success]= "creado exitosamente!"
-      redirect_to  dashboard_path
+      puts "xxxxxxxxxxxx entre al if xxxxxxxxxxxxxx"
+      flash[:success]= "actualizado exitosamente!"
+      render 'edit'
       # if params[:home][:show]
       #   redirect_to @home
       # else
       #   redirect_to edit_home_path(@home)
       # end
-
-    else
-      render 'edit'
-  
     end
 
   end

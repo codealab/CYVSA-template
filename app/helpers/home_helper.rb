@@ -41,7 +41,7 @@ module HomeHelper
         text = Home.first.slider_title_one if !Home.first.text_promocional.blank?
 
       when "boton"
-        text = Home.first.slider_text_oneif !Home.first.slider_text_one.blank?
+        text = Home.first.slider_text_one if !Home.first.slider_text_one.blank?
 
       end
     end

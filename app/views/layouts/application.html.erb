@@ -10,10 +10,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="header-fixed">
-    <%= params %>   <!--checo en que accion estoy-->
+    <!--<%= params %>   <!--checo en que accion estoy-->
     
     <% if current_user %>
-      <% if current_user.admin %>
+      <% if current_user.admin? %>
       <%= render 'layouts/dashboard' %>
       <%end %>
     <% else %>
