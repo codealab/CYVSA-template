@@ -33,14 +33,16 @@
                 <div class="col-md-4 md-margin-bottom-40">
                     <!-- Recent Blogs -->
                     <div class="posts">
-                        <div class="headline"><h2><%= recognition %></h2></div>
+                    <% Home.all.each do |f| %>
+                        <div class="headline"><h2><%= f.title_recognition %></h2></div>
+                        <% end %>
                         <dl class="dl-horizontal">
                         <%  Year.order('random()').limit(3).where(:tipo => 'Reconocimiento').each do |t| %>
                             <dt><a href="#"><img src="<%= t.image %>" alt="" /></a></dt>
                             <dd>
                              <%= t.date %> - <%= t.title %> 
                                
-                            </dd>
+                            </dd></br>
 
                             <% end %>
                         </dl>
@@ -65,7 +67,7 @@
 
                     <!-- Social Links -->
                     <div class="headline"><h2><%= office("Ponga su título aquí","titulo")  %></h2></div>
-                    <p> <%= office("Ponga su descripción aquí","drescripcio") %></p> 
+                   <!--  <p> <%= office("Ponga su descripción aquí","descripcion") %></p>  -->
                     
                      <button class="btn btn-block btn-googleplus rounded">
                       <i class="fa fa-map-marker"></i> Google Maps

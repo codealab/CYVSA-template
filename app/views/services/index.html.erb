@@ -25,14 +25,14 @@
                     <% @services.each do |service| %>
                     <tr>
                         
-                        <td><%= service.icon %></td>
+                        <td><i class="fa <%= "#{service.icon}"%> service-icon color-blue"></i></td>
                         <td><%= service.title %></td>
                         <td class="col-sm-8"><%= service.content.to_s.html_safe %></td>
                         
                         <td>
                             
                             
-                            <%= link_to "Editar", edit_service_path(service), :class => 'btn btn-success btn-xs' %>
+                            <%= link_to "Editar", edit_service_path(service), :class => 'btn btn-warning btn-xs' %>
 
                             <%= link_to "borrar", service_path(service),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
                             

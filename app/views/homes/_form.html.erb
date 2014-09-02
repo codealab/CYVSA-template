@@ -4,38 +4,35 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page"
 			>
-
-			<div class="panel panel-sea margin-bottom-40">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> Logo</h3>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                   
-                                    <th>Imagen</th>
-                                   
-                                    
-                                    <th>Boton</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    
-                                    <td><%= image_tag @home.logo_url(:thumb).to_s %></td>
-                                   
-                                    <td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 " data-toggle="modal" data-target="#myModal" value="Cambiar logo" type="button"></td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>                      
-                </div>
-
-
-
 			<dl class="dl-horizontal">
+				<div class="panel panel-sea margin-bottom-40">
+					<div class="panel-heading">
+						<h3 class="panel-title"> Logo</h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									
+									<th>Imagen</th>
+									
+									
+									<th>Boton</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td><%= image_tag @home.logo_url(:thumb).to_s %></td>
+									
+									<td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 " data-toggle="modal" data-target="#myModal" value="Cambiar logo" type="button"></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
 				
 				
 				<!-- Modal logo -->
@@ -53,7 +50,7 @@
 								<%= image_tag @home.logo_url(:thumb).to_s, id: "image_url" %></br></br>
 								<div class="button">
 									<div class="text">
-										Selecciona un archivo
+										Selecciona una imagen
 									</div>
 									<%= f.file_field :logo, data: {image: "image_url"}, class: "input_pluguin"  %>
 									
@@ -73,39 +70,39 @@
 						<% end %>
 					</div>
 				</div>
-				</dl>
-				<!-- end Modal -->
-				<dl class="dl-horizontal">
+			</dl>
+			<!-- end Modal -->
+			<dl class="dl-horizontal">
 				<div class="reg-header">
 				</div>
 				<div class="panel panel-sea margin-bottom-40">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> Imagen uno</h3>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                   
-                                    <th>Imagen uno</th>
-                                   
-                                    
-                                    <th>Boton</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    
-                                    <td><%= image_tag @home.slider_image_one_url(:thumb).to_s, id: "slider_image_one_url" %></td>
-                                   
-                                    <td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 "  data-toggle="modal" data-target="#slider_image_one" value="Cambiar imagen 1" type="button"></td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>                      
-                </div>
-			
+					<div class="panel-heading">
+						<h3 class="panel-title"> Imagen uno</h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									
+									<th>Imagen uno</th>
+									
+									
+									<th>Boton</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td><%= image_tag @home.slider_image_one_url(:thumb).to_s, id: "slider_image_one_url" %></td>
+									
+									<td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 "  data-toggle="modal" data-target="#slider_image_one" value="Cambiar imagen 1" type="button"></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
 				<!-- Button trigger modal  slider one -->
 				
 				<!-- end Button trigger modal  slider one -->
@@ -122,19 +119,19 @@
 								<%= image_tag @home.slider_image_one_url(:thumb).to_s, id: "image_one_slider" %></br></br>
 								<div class="button">
 									<div class="text">
-										Selecciona un archivo
+										Selecciona una imagen
 									</div>
 									<%= f.file_field :slider_image_one, data: {image: "image_one_slider"}, class: "input_pluguin"  %>
 								</div></br></br>
 								
 								<div class="control-group">
-									<%= f.label :imagen_uno, :class => 'control-label' %>
+									<%= f.label :Título_de_imagen_uno, :class => 'control-label' %>
 									<div class="controls">
 										<%= f.text_field :slider_title_one, :class => 'text_field' %>
 									</div>
 								</div>
 								<div class="control-group">
-									<%= f.label :slider_text_one, :class => 'control-label' %>
+									<%= f.label :Descripción, :class => 'control-label' %>
 									
 									<div class="controls">
 										
@@ -162,33 +159,33 @@
 			</div>
 			<dl class="dl-horizontal">
 				<div class="panel panel-sea margin-bottom-40">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> Imagen dos</h3>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                   
-                                    <th>Imagen dos</th>
-                                   
-                                    
-                                    <th>Boton</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    
-                                    <td><%= image_tag @home.slider_image_two_url(:thumb).to_s, id: "slider_image_one_url" %></td>
-                                   
-                                    <td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 "  data-toggle="modal" data-target="#slider_image_two" value="Cambiar imagen 2" type="button"></td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>                      
-                </div>
-			
+					<div class="panel-heading">
+						<h3 class="panel-title"> Imagen dos</h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									
+									<th>Imagen dos</th>
+									
+									
+									<th>Boton</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td><%= image_tag @home.slider_image_two_url(:thumb).to_s, id: "slider_image_one_url" %></td>
+									
+									<td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 "  data-toggle="modal" data-target="#slider_image_two" value="Cambiar imagen 2" type="button"></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
 				
 				<!-- end Button trigger modal  slider two-->
 				<!-- Modal slider two -->
@@ -204,19 +201,19 @@
 								<%= image_tag @home.slider_image_two_url(:thumb).to_s, id: "image_two_slider" %></br></br>
 								<div class="button">
 									<div class="text">
-										Selecciona un archivo
+										Selecciona una imagen
 									</div>
 									<%= f.file_field :slider_image_two, data: {image: "image_two_slider"}, class: "input_pluguin" %>
 								</div></br></br>
 								
 								<div class="control-group">
-									<%= f.label :slider_title_two, :class => 'control-label' %>
+									<%= f.label :Título_de_imagen_dos, :class => 'control-label' %>
 									<div class="controls">
 										<%= f.text_field :slider_title_two, :class => 'text_field' %>
 									</div>
 								</div>
 								<div class="control-group">
-									<%= f.label :Imagen_dos, :class => 'control-label' %>
+									<%= f.label :Descripción, :class => 'control-label' %>
 									
 									<div class="controls">
 										
@@ -244,33 +241,33 @@
 			<div class="reg-header">
 			</div>
 			<dl class="dl-horizontal">
-			<div class="panel panel-sea margin-bottom-40">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> Imagen tres</h3>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                   
-                                    <th>Imagen tres</th>
-                                   
-                                    
-                                    <th>Boton</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    
-                                    <td><%= image_tag @home.slider_image_three_url(:thumb).to_s, id: "slider_image_one_url" %></td>
-                                   
-                                    <td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 "  data-toggle="modal" data-target="#slider_image_three" value="Cambiar imagen 3" type="button"></td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>                      
-                </div>
+				<div class="panel panel-sea margin-bottom-40">
+					<div class="panel-heading">
+						<h3 class="panel-title"> Imagen tres</h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									
+									<th>Imagen tres</th>
+									
+									
+									<th>Boton</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td><%= image_tag @home.slider_image_three_url(:thumb).to_s, id: "slider_image_one_url" %></td>
+									
+									<td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 "  data-toggle="modal" data-target="#slider_image_three" value="Cambiar imagen 3" type="button"></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
 				
 				
 				<!-- end Button trigger modal  slider three-->
@@ -287,7 +284,7 @@
 								<%= image_tag @home.slider_image_three_url(:thumb).to_s, id: "image_three_slider" %></br></br>
 								<div class="button">
 									<div class="text">
-										Selecciona un archivo
+										Selecciona una imagen
 									</div>
 									<%= f.file_field :slider_image_three, data: {image: "image_three_slider"}, class: "input_pluguin" %>
 								</div>
@@ -295,13 +292,13 @@
 								</br></br>
 								
 								<div class="control-group">
-									<%= f.label :slider_title_three, :class => 'control-label' %>
+									<%= f.label :Título_de_imagen_tres, :class => 'control-label' %>
 									<div class="controls">
 										<%= f.text_field :slider_title_three, :class => 'text_field' %>
 									</div>
 								</div>
 								<div class="control-group">
-									<%= f.label :slider_text_three, :class => 'control-label' %>
+									<%= f.label :Descripción, :class => 'control-label' %>
 									
 									<div class="controls">
 										
@@ -322,9 +319,9 @@
 				<!--  <dt><strong><%= model_class.human_attribute_name(:Slider_title_three) %>:</strong></dt>
 				<dd><%= @home.slider_title_one%></dd></dd></br>
 				<dt><strong><%= model_class.human_attribute_name(:Slider_text_three) %>:</strong></dt>
-				<dd><%= @home.slider_text_three%></dd>
+				<dd><%= @home.slider_text_three%></dd>-->
 				
-			</dl> -->
+			</dl> 
 			<div class="reg-header">
 			</div>
 			<%= form_for @home,   :html => {:multipart => true}, data: true, authenticity_token: true do |f| %>
@@ -342,17 +339,15 @@
 					<%= f.text_area :text_promocional, :class => 'wysihtml5' %>
 				</div>
 			</div>
-
 			<div class="control-group">
 				<%= f.label :Titulo_del_boton_promocional, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.text_field :title_button_promocional, :class => 'text_field' %>
 				</div>
 			</div> </br></br>
-<div class="reg-header">
+			<div class="reg-header">
 			</div>
-
-    <h2>Historia</h2>
+			<h2>Historia</h2>
 			<div class="control-group">
 				<%= f.label :Titulo_historia, :class => 'control-label' %>
 				<div class="controls">
@@ -372,7 +367,6 @@
 				</div>
 			</div>
 			</br></br>
-
 			<div class="reg-header">
 			</div>
 			<h1> Contacto </h1>
@@ -417,8 +411,7 @@
 			</br></br>
 			<div class="reg-header">
 			</div>
-			
-
+			<h2>Reconocimiento</h2>
 			<div class="control-group">
 				<%= f.label :Titulo_reconocimiento, :class => 'control-label' %>
 				<div class="controls">
@@ -428,20 +421,20 @@
 			<div class="reg-header">
 			</div>
 			<!-- <div class="control-group">
-				<%= f.label :Descripción, :class => 'control-label' %>
-				<div class="controls">
-					<%= f.text_area :text_recognition, :class => 'wysihtml5' %>
-				</div>
+					<%= f.label :Descripción, :class => 'control-label' %>
+					<div class="controls">
+							<%= f.text_area :text_recognition, :class => 'wysihtml5' %>
+					</div>
 			</div> -->
 			<div class="control-group">
-			<h2>Bolsa de trabajo</h2>
-			<%= f.label :Titulo_bolsa_de_trabajo, :class => 'control-label' %>
+				<h2>Bolsa de trabajo</h2>
+				<%= f.label :Titulo_bolsa_de_trabajo, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.text_field :title_job, :class => 'text_field' %>
 				</div>
 			</div></br>
 			<div class="control-group">
-			<%= f.label :Descripción_bolsa_de_trabajo, :class => 'control-label' %>
+				<%= f.label :Descripción_bolsa_de_trabajo, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.text_area :text_job, :class => 'wysihtml5' %>
 				</div>
@@ -452,7 +445,7 @@
 					<%= f.text_field :title_button_job, :class => 'text_field' %>
 				</div>
 			</div></br>
-				<div class="reg-header">
+			<div class="reg-header">
 			</div>
 			<div class="control-group">
 				<h2>Ubicación de oficnas</h2>
@@ -461,7 +454,7 @@
 					<%= f.text_field :title_office, :class => 'text_field' %>
 				</div>
 			</div></br>
-			<div class="control-group">
+			<!-- <div class="control-group">
 				<h2></h2><%= f.label :Descripción_de_ubucación_de_oficina, :class => 'control-label' %>
 				<div class="controls">
 					<%= f.text_area :text_office, :class => 'wysihtml5' %>
@@ -472,11 +465,9 @@
 				<div class="controls">
 					<%= f.text_field :title_button_office, :class => 'text_field' %>
 				</div>
-			</div></br>
-
-				<div class="reg-header">
+			</div></br> -->
+			<div class="reg-header">
 			</div>
-
 			<div class="col-lg-3 text-right">
 				<%= f.submit "Guardar",class: 'btn btn-primary'%>
 			</div>

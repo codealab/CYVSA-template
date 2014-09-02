@@ -3,10 +3,6 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page">
 			<dl class="dl-horizontal">
-				
-				
-				<dd><%= image_tag @notice.image_url(:thumb).to_s %></dd></br>
-
 				<div class="panel panel-sea margin-bottom-40">
                     <div class="panel-heading">
                         <h3 class="panel-title"> Informativo</h3>
@@ -25,7 +21,7 @@
                             <tbody>
                                 <tr>
                                     
-                                    <td> </td>
+                                    <td> <%= image_tag @notice.image_url(:thumb).to_s %></td>
                                    
                                     <td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 " data-toggle="modal" data-target="#myModal" value="Agregar imagen" type="button"></td>
                                 </tr>
@@ -54,7 +50,7 @@
 								<%= image_tag @notice.image_url(:thumb).to_s, id: "image_url" %></br></br>
 								<div class="button">
 									<div class="text">
-										Selecciona un archivo
+										Selecciona una imagen
 									</div>
 									<%= f.file_field :image, data: {image: "image_url"}, class: "input_pluguin"  %>
 									

@@ -94,16 +94,18 @@ module HomeHelper
     text.to_s.html_safe
   end
 
-  def recognition
-    reconocimiento = "<span>Ponga su título aquí.</span>"
-    if Home.first
-      if !Home.first.title_recognition
-        reconocimiento = Home.first.title_recognition.blank?
+  # def recognition
+  #   reconocimiento = "<span>Ponga su título aquíbbbbbbb.</span>"
+  #   if Home.first
+     
+  #     if !Home.first.title_recognition
+       
+  #       reconocimiento = Home.first.title_recognition.blank?
 
-      end
-    end
-    reconocimiento.html_safe
-  end
+  #     end
+  #   end
+  #   reconocimiento.html_safe
+  # end
 
 
   def job (texto_default, titulo)
@@ -139,7 +141,7 @@ module HomeHelper
         text = Home.first.title_office if !Home.first.title_office.blank?
 
       when "descripcion"
-        text = Home.first.text_offce if !Home.first.text_office.blank?
+        text = Home.first.text_office if !Home.first.text_office.blank?
 
       end
     end
