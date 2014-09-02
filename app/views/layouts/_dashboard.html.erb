@@ -1,39 +1,61 @@
-<!--=== Breadcrumbs ===-->
-<div class="breadcrumbs">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
+<div class="wrapper">
+  <!--=== Header ===-->
+  <div class="header" id="menu_estatico">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container">
+        
+      </div>
+    </div>
+    <!-- End Topbar -->
+    
+    <!-- Navbar -->
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars"></span>
+          </button>
+          <a class="navbar-brand" href="/">
             
             <img id="logo-header" src="<%= logo%>" alt="Logo">
-        </a>
-        <ul class="pull-right breadcrumb">
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
             
-        </li>
-        
-        
-        <% if signed_in? %>
-        <li>Hola: <%= current_user.name%></li>
-            <% if current_user %>
-                <% if current_user.admin %>
-                    <li><%= link_to "Editar cuenta", edit_user_path(current_user) %></li>
-                <% end %>
-            <% else %>
-        <% end %>
-        <li>
-            <%= link_to "Salir del administrador", signout_path, method: "delete" %>
-        </li>
-        
-        <li><%= link_to "Inicio", root_path %></li>
-        <li><%= link_to "Dashboard", dashboard_path %></li>
-        <li><%= link_to "Informativos",notices_path(@notice) %></li>
-        <li><%= link_to "Historia", years_path(@year) %></li>
-        <li><%= link_to "servicios", service_path(@service) %></li>
-        <li><%= link_to "Proyectos"  %></li>
-        <li><%= link_to "Reconocimientos y Matto", :controller => :static_pages, :action => :recognition%></li>
-        <% else %>
-        <li><%= link_to "Sign in", admin_path %></li>
-        
-        <% end %>
-    </ul>
-    </div><!--/container-->
-    </div><!--/breadcrumbs-->
-    <!--=== End Breadcrumbs ===-->
+            <!-- End Home -->
+            
+            
+            
+            <!-- Ens Portfolio -->
+            <!-- Blog -->
+            <li class="dropdown">
+              <li><%= link_to "Dashboard", dashboard_path %></li>
+              
+            </li>
+            
+            <!-- Contacts -->
+            <li class="dropdown">
+              <a href="static_pages/cyvsa_home" class="dropdown-toggle" data-toggle="dropdown">
+                Hola: <%= current_user.name%>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Editar cuenta", edit_user_path(current_user) %></li>
+                <li> <%= link_to "Salir del administrador", signout_path, method: "delete" %></li>
+                
+              </ul>
+              
+            </li>
+            <!-- End Contacts -->
+            
+          </ul>
+          </div><!--/navbar-collapse-->
+        </div>
+      </div>
+      <!-- End Navbar -->
+    </div>
+    <!--=== End Header ===-->

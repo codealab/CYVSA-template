@@ -26,12 +26,19 @@
     
     <%= yield %>
 
-    <% if current_user %>
-      <% if current_user.admin %>
-      <%end %>
+
+
+<% if params[:controller]!= "sessions" %>
+  <% if current_user %>
+    <% if !current_user.admin? %>
+       <%= render 'layouts/footer' %>
+    <%end %>
     <% else %>
-      <%= render 'layouts/footer' %>
-    <% end %>
+    <%= render 'layouts/footer' %>
+  <% end %>
+<% end %>
+
+
 
     <script type="text/javascript">
     jQuery(window).load(function() {

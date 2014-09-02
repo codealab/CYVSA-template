@@ -37,7 +37,7 @@
 			<div class="control-group">
 				<%= f.label :Fecha, :class => 'control-label' %>
 				<div class="controls">
-					<%= f.date_select :date, :start_year=>1900 %>
+					<%= f.text_field :date, :class => 'text_field' %>
 				</div>
 				<div class="control-group">
 					
@@ -54,14 +54,14 @@
 					
 					<% if params[:action] == "new" %>
 					<div class="col-lg-3 text-right">
-						<%= f.submit "Crear", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
+						<%= f.submit "Crear", class: "btn btn-primary" %>
 					</div>
 					<% else %>
 					<div class="col-lg-3 text-right">
-						<%= f.submit "Guardar", class: "btn-u btn-brd btn-brd-hover btn-u-blue" %>
+						<%= f.submit "Guardar", class: "btn btn-primary" %>
 					</div>
 					<% end %>
-					<%= link_to "Cancelar", dashboard_path, class: 'btn-u btn-u-red'%>
+					<%= link_to "Cancelar", dashboard_path, class: 'btn btn-danger'%>
 					
 					<% end %>
 				</div>

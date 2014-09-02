@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(version: 20140826170948) do
   create_table "years", force: true do |t|
     t.string   "title"
     t.text     "text"
-    t.date     "date"
+    t.integer  "date"
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"

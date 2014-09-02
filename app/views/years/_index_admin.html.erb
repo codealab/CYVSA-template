@@ -47,7 +47,7 @@
                         <% else %>
                         <td class="col-sm-6"><%= year.text.to_s.html_safe %></td>
                         <% end %>
-                        <td><%= year.date.strftime("%Y") %></td>
+                        <td><%= year.date %></td>
                         
                         <td>
                             <% if params[:tipo] %>

@@ -38,9 +38,10 @@
                         <%  Year.order('random()').limit(3).where(:tipo => 'Reconocimiento').each do |t| %>
                             <dt><a href="#"><img src="<%= t.image %>" alt="" /></a></dt>
                             <dd>
-                            <i class="fa fa-history"></i> <%= t.date.strftime("%Y") %>
-                                <p><%= t.title %></p> 
+                             <%= t.date %> - <%= t.title %> 
+                               
                             </dd>
+
                             <% end %>
                         </dl>
                        

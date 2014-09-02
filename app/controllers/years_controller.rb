@@ -1,4 +1,5 @@
 class YearsController < ApplicationController
+	skip_before_action :require_login, only: [:index, :show]
 	def index
 		if params[:tipo]
 			@years = Year.order(:date).where(:tipo => 'Reconocimiento')

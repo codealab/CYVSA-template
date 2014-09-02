@@ -3,7 +3,7 @@ class CreateTimeLines < ActiveRecord::Migration
     create_table :time_lines do |t|
       t.text :content
       t.string :title
-      t.date :date
+      t.integer :date
       t.string :image
 
       t.timestamps

@@ -28,10 +28,11 @@
                         
                         <img class="img-responsive" src="<%= y.image %>" alt="">
                         <div class="inner-team">
-                            <small class="color-blue"><i class="fa fa-history"></i> <%= y.date.strftime("%Y") %></small>
-                            <h4><%= y.title.to_s.html_safe %></h4>
+                            <h4 class="color-blue pull-left"> <%= y.date %></h4></br>
                             
-                            <hr>
+                                <h4>  <%= y.title.to_s.html_safe %></h4>
+                            
+
                             <ul class="list-inline team-social">
                                 
                             </ul>

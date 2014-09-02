@@ -3,7 +3,7 @@ class CreateYears < ActiveRecord::Migration
     create_table :years do |t|
     	t.string :title
     	t.text :text
-      t.date :date
+      t.integer :date
       t.string :image
 
       t.timestamps

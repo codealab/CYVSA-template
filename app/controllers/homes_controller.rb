@@ -9,10 +9,10 @@ class HomesController < ApplicationController
   end
 
   def update
-puts "xxxxxxxxxxxxxxxxxxxxxxxxxx"
+
     @home = Home.find(params[:id])
     if @home.update_attributes(home_params)
-      puts "xxxxxxxxxxxx entre al if xxxxxxxxxxxxxx"
+     
       flash[:success]= "actualizado exitosamente!"
       render 'edit'
       # if params[:home][:show]
