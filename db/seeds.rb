@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 lorem =  "Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur."
-date = 
+
 
 
 	Home.create(
