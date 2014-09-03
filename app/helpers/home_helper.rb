@@ -1,9 +1,24 @@
 module HomeHelper
+    # def recognition
+  #   reconocimiento = "<span>Ponga su título aquíbbbbbbb.</span>"
+  #   if Home.first
+     
+  #     if !Home.first.title_recognition
+       
+  #       reconocimiento = Home.first.title_recognition.blank?
 
-  def logo
-    logo_path = "/assets/logo.png"
-    logo_path = Home.first.logo if Home.first
-    logo_path
+  #     end
+  #   end
+  #   reconocimiento.html_safe
+  # end
+  def logotipo
+    imagen_path = "/assets/logo.png"
+    if Home.first
+       if !Home.first.logo 
+        imagen_path = Home.first.logo.blank?
+      end
+    end
+    imagen_path
   end
 
   def photo(imagen)

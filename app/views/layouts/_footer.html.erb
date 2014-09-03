@@ -38,7 +38,7 @@
                         <% end %>
                         <dl class="dl-horizontal">
                         <%  Year.order('random()').limit(3).where(:tipo => 'Reconocimiento').each do |t| %>
-                            <dt><a href="#"><img src="<%= t.image %>" alt="" /></a></dt>
+                            <dt><a href="/static_pages/recognition"><img src="<%= imagen %>" alt="" /></a></dt>
                             <dd>
                              <%= t.date %> - <%= t.title %> 
                                

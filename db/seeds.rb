@@ -5,6 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+lorem =  "Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur."
+date = 
+
+
 	Home.create(
 	logo: '',
 	slider_image_one: '',
@@ -12,15 +17,15 @@
 	slider_text_one: 'Una empresa Méxicana hecha por Mexicanos.',
 	slider_image_two: '',
 	slider_title_two: 'Lorem Ipsum',
-	slider_text_two: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
+	slider_text_two: lorem,
 	slider_image_three: '',
 	slider_title_three: 'Lorem Ipsum',
-	slider_text_three: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
+	slider_text_three: lorem,
 	title_promocional: 'Nuestro trabajo y Calida es la diferencia',
-	text_promocional: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
+	text_promocional: lorem,
 	title_button_promocional: 'Contactanos Ahora',
 	title_history: 'Nuestra Historia',
-	text_history: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
+	text_history: lorem,
 	title_button_history: 'Nuestra Historia',
 	title_contact: 'Contactanos',
 	address: 'Garibaldi #515',
@@ -29,12 +34,12 @@
 	fax: '87654321',
 	email: 'cyvsa@gmail.com',
 	title_recognition: 'RECONOCIMIENTOS IMEI',
-	text_recognition: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
+	text_recognition: lorem,
 	title_office: 'Oficinas Y Centros de Mantenimiento',
-	text_office: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
+	text_office: lorem,
 	title_button_office: '',
 	title_job: 'Bolsa de trabajo',
-	text_job: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.',
+	text_job: lorem,
 	title_button_job: '')
 
 
@@ -69,42 +74,38 @@ Notice.create(
 
 	)
 
+	iconos = ["fa-line-chart","fa-bank","fa-plug","fa-building","fa-code","fa-coffee"]
+
+	iconos.count.times do |icon|
+
 Service.create(
-	icon:'fa-line-chart',
+	icon: iconos[icon],
 	title:'Instalación',
-	content:'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.'
+	content:lorem
 
 	)
-Service.create(
-	icon:'fa-bank',
-	title:'Instalación',
-	content:'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.'
+end
+# iconos.each do |icon|
+# Service.create(
+# 	icon: icon,
+# 	title:'Instalación',
+# 	content:lorem
 
-	)
-Service.create(
-	icon:'fa-plug',
-	title:'Instalación',
-	content:'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.'
+# 	)
+# end
 
-	)
-Service.create(
-	icon: 'fa-line-chart',
+
+
+16.times do |index|
+
+ tipo = (index%2 == 0)? "Historia":"Reconocimiento"
+
+ Year.create(
 	title: 'Instalación',
-	content: 'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.'
-	)
-
-Service.create(
-	icon:'fa-building',
-	title:'Instalación',
-	content:'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.'
+	text:  lorem,
+	date: rand(1980..2014),
+	image: '',
+	tipo: tipo
 
 	)
-Service.create(
-	icon:'fa-bank',
-	title:'Instalación',
-	content:'Lorem IpsumLorem ipsum Culpa dolore officia ad commodo proident amet occaecat tempor voluptate aliquip sint sunt cupidatat adipisicing adipisicing do est tempor Excepteur.'
-
-	)
-	
-
-	
+	end

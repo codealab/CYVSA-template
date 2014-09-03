@@ -25,9 +25,13 @@ module YearsHelper
 
   
 
-  def image
-    logo_path = "/assets/3.png"
-    logo_path = Year.first.image if Year.first
-    logo_path
+ def imagen
+    imagen_path = "/assets/h.jpg"
+    if Year.first
+       if !Year.first.image 
+        imagen_path = Year.first.image.blank?
+      end
+    end
+    imagen_path
   end
 end
