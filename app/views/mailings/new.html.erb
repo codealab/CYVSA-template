@@ -1,0 +1,19 @@
+ <!--=== Content Part ===-->
+    <div class="container content">     
+        <div class="row margin-bottom-30">
+            <div class="col-md-9 mb-margin-bottom-30">
+              
+        <%= form_for @mailing, url: "/mailings/create" do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :Nombre %>:
+        <%= f.text_field :name %><br />
+        <%= f.label :Correo %>:
+        <%= f.text_field :email %><br />
+        <%= f.label :Mensage %>:
+        <%= f.text_area :message%><br />
+        <%= f.submit %>
+        <% end %>
+            
+         
+    </div><!--/container-->     
+    <!--=== End Content Part ===-->

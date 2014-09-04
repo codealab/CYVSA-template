@@ -1,4 +1,7 @@
 Template::Application.routes.draw do
+  get "mailings/index"
+  get "mailings/new"
+  post "mailings/create"
   resources :notices
   resources :informations
   resources :years
