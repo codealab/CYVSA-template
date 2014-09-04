@@ -1,19 +1,30 @@
- <!--=== Content Part ===-->
-    <div class="container content">     
-        <div class="row margin-bottom-30">
-            <div class="col-md-9 mb-margin-bottom-30">
-              
-        <%= form_for @mailing, url: "/mailings/create" do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
-        <%= f.label :Nombre %>:
-        <%= f.text_field :name %><br />
-        <%= f.label :Correo %>:
-        <%= f.text_field :email %><br />
-        <%= f.label :Mensage %>:
-        <%= f.text_area :message%><br />
-        <%= f.submit %>
-        <% end %>
+<div class="container content">
+    <div class="row">
+        <div>
+            <!--=== Content Part ===-->
+            <div class="container content">
+                <div class="row margin-bottom-30">
+                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 reg-page">
+                        
+                        <%= form_for @mailing, url: "/mailings/create" do |f| %>
+                        <%= render 'shared/error_messages', object: f.object %>
+                        <%= f.label :Nombre %>:
+                        <%= f.text_field :name %><br />
+                        <%= f.label :Correo %>:
+                        <%= f.text_field :email %><br />
+                        <%= f.label :Mensage %>:
+                        <%= f.text_area :message%><br />
+                        <%= f.submit %>
+                        <% end %>
+                        
+                        
+                        </div><!--/container-->
+                        <!--=== End Content Part ===-->
+                    </div>
+                </div>
+            </div>
             
-         
-    </div><!--/container-->     
-    <!--=== End Content Part ===-->
+        </div>
+    </div>
+    
+</div>
