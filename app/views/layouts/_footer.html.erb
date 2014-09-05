@@ -36,13 +36,15 @@
                     <% Home.all.each do |f| %>
                         <div class="headline"><h2><%= f.title_recognition %></h2></div>
                         <% end %>
-                        <dl class="dl-horizontal">
+                       
                         <%  Year.order('random()').limit(3).where(:tipo => 'Reconocimiento').each do |t| %>
+                        <dl class="dl-horizontal">
                             <dt><a href="/static_pages/recognition"><img src="<%= imagen %>" alt="" /></a></dt>
                             <dd>
-                             <%= t.date %> - <%= t.title %> 
-                               
-                            </dd></br>
+                                <p><a href="#"><%= t.date %> - <%= t.title %> </a></p> 
+                            </dd>
+                        </dl>
+                            </br>
 
                             <% end %>
                         </dl>
@@ -61,7 +63,7 @@
                             <p>Teléfono 1: <%= about_us("Escribe el telefono de la empresa","phone_one")%><br /></p>
                             <p>Teléfono 2: <%= about_us("Escribe el telefono de la empresa","phone_two")%><br /></p>
                             <p>Fax: <%= about_us("Escribe el fax de la empresa","fax")%><br /></p>
-                            <p>Email: <%= link_to about_us("Escribe el Eamil de la empresa","email")%></p>
+                            <p>Email: <%= about_us("Escribe el Eamil de la empresa","email") %></p>
                     </address>
                     <!-- End Contact Us -->
 

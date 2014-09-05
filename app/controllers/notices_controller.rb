@@ -10,10 +10,10 @@ class NoticesController < ApplicationController
 		@notice = Notice.new(notice_params)
 		if @notice.save
 			flash[:success]= "cargada exitosamente."
-			render 'edit'
+			redirect_to notices_path
 
 		else
-			render :action => 'new'
+			render 'new'
 		end
 	end
 

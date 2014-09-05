@@ -5,6 +5,7 @@ $(document).ready(function() {
 
         $("#service_icon").val(icono);
         $("#icon-service").modal("hide");
-        $("#icono-show").addClass(icono);
+        $("#icono-show").removeAttr('class').addClass(icono + " color-blue");
+
     });
 });

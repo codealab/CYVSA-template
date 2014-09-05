@@ -1,4 +1,8 @@
 class Home < ActiveRecord::Base
+	# validates :logo, presence: true
+	# validates :slider_image_one, presence: true
+	# validates :slider_title_one, presence: true
+
 	validates  :title_promocional, :address,  presence: true
 	validates :telephone_one, numericality: true
 	validates :telephone_two, numericality: true

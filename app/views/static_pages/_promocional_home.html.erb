@@ -4,13 +4,31 @@
         <div class="row">
             <div class="col-md-9 animated fadeInLeft">
                 <!-- <span>Unify is a clean and fully responsive incredible Template.</span> -->
-                <p><%= promocional("Ponga su título aquí.","titulo") %></p>
+                <h3><p><%= promocional("Ponga su título aquí.","titulo") %></p></h3>
                 <p><%= promocional("Ponga su descripción aquí.","descripcion") %></p>
             </div>
+            <!-- Button trigger modal -->
             <div class="col-md-3 btn-buy animated fadeInRight">
-                <a href="mailings/new" class="btn-u btn-u-lg"><%= promocional("Ponga su título de boton aquí","boton") %></a>
+                <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mailer_content"><%= promocional("Ponga su título de boton aquí","boton") %></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="mailer_content" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">ESCRÍBENOS</h4>
+                        </div>
+                        <div  id="email-content">
+
+                        <%= render "mailings/modal" %>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div><!--/row-->
-    <!-- End Purchase Block -->
+</div>
+</div>
+</div><!--/row-->
+<!-- End Purchase Block -->

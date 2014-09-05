@@ -1,0 +1,17 @@
+<%= form_for @mailing, url: "/mailings/create", remote: true do |f| %>
+<div class="modal-body" >
+    
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.label :Nombre %>:
+    <%= f.text_field :name %><br/>
+    <%= f.label :Correo %>:
+    <%= f.text_field :email %><br/>
+    <%= f.label :Mensage %>:
+    <%= f.text_area :message%><br/>
+    
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <%= f.button "Emviar",class: 'btn btn-primary' %>
+</div>
+<% end %>

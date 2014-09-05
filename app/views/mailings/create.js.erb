@@ -1,0 +1,11 @@
+
+var valid = <%= @mailing.valid?%>
+if (valid){
+	$("#mailer_content").modal("hide");
+	
+
+}
+else{
+
+	$("#email-content").html("<%= escape_javascript(render('modal')) %>")
+	}

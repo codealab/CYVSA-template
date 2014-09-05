@@ -3,78 +3,24 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page">
 			<dl class="dl-horizontal">
-				<div class="panel panel-sea margin-bottom-40">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> Informativo</h3>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                   
-                                    <th>Imagen</th>
-                                   
-                                    
-                                    <th>Boton</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    
-                                    <td> <%= image_tag @notice.image_url(:thumb).to_s %></td>
-                                   
-                                    <td class="col-md-3"><input class="btn btn-success btn-xs  btn-md col-md-9 " data-toggle="modal" data-target="#myModal" value="Agregar imagen" type="button"></td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>                      
-                </div>
-                <h2> Informativo</h2>
+					
+				<%= form_for @notice, :html => {:multipart => true, :class => 'form-horizontal'} do |f| %>
+			<%= render 'shared/error_messages', object: f.object %>
+			<dl class="dl-horizontal">
+				<dt><strong><%= model_class.human_attribute_name(:Imagen) %>:</strong></dt>
+				<dd><%= image_tag @notice.image_url(:thumb).to_s, id: "image_url" %></dd></br>
 				
-				<!-- Button trigger modal -->
-				
-				<!-- end Button trigger modal -->
-				<!-- Modal logo -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-								<h4 class="modal-title" id="myModalLabel">Cambiar imagen</h4>
-							</div>
-							<%= form_for @notice, :html => {:multipart => true, id:"logo_df"}, remote: true, authenticity_token: true do |f| %>
-							<div class="modal-body">
-								
-								
-								<%= image_tag @notice.image_url(:thumb).to_s, id: "image_url" %></br></br>
-								<div class="button">
-									<div class="text">
-										Selecciona una imagen
-									</div>
-									<%= f.file_field :image, data: {image: "image_url"}, class: "input_pluguin"  %>
-									
-								</div>
-								
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn-u btn-u-red" data-dismiss="modal">Cerrar</button>
-								<%= f.button "Cargar", class: 'btn btn-primary' %>
-								
-							</div>
-							
-						</div>
-						<% end %>
+				<div class="button">
+					<div class="text">
+						Selecciona una imagen
 					</div>
+					<%= f.file_field :image, data: {image: "image_url"}, class: "input_pluguin"  %>
 				</div>
-				<!-- end Modal -->
-				
-			</dl>
+			</dl></dd></br>
 			<div class="reg-header">
 			</div>
 			
-			<%= form_for @notice, :html => {:multipart => true, :class => 'form-horizontal'} do |f| %>
-			<%= render 'shared/error_messages', object: f.object %>
+	 <h2> Informativo</h2>
 			
 			<div class="control-group">
 				<%= f.label :Titlulo, :class => 'control-label' %>

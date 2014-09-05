@@ -1,25 +1,13 @@
 module HomeHelper
-    # def recognition
-  #   reconocimiento = "<span>Ponga su título aquíbbbbbbb.</span>"
-  #   if Home.first
-     
-  #     if !Home.first.title_recognition
-       
-  #       reconocimiento = Home.first.title_recognition.blank?
+   
+ def logotipo
+        logo_path = "/assets/logo.png"
 
-  #     end
-  #   end
-  #   reconocimiento.html_safe
-  # end
-  def logotipo
-    imagen_path = "/assets/logo.png"
-    if Home.first
-       if !Home.first.logo 
-        imagen_path = Home.first.logo.blank?
-      end
+        logo_path = Home.first.logo if Home.first
+        logo_path
+        
     end
-    imagen_path
-  end
+  
 
   def photo(imagen)
     slider_path ="/assets/3.png"
@@ -46,21 +34,21 @@ module HomeHelper
 
 
   def slider (texto_default, titulo)
-    text = texto_default
+    texto = texto_default
 
     if Home.first
 
       case titulo
 
       when "titulo"
-        text = Home.first.slider_title_one if !Home.first.text_promocional.blank?
+        texto = Home.first.slider_title_one if !Home.first.text_promocional.blank?
 
-      when "boton"
-        text = Home.first.slider_text_one if !Home.first.slider_text_one.blank?
+      when "descripcion"
+        texto = Home.first.slider_text_one if !Home.first.slider_text_one.blank?
 
       end
     end
-    text.to_s.html_safe
+    texto.to_s.html_safe
   end
 
 

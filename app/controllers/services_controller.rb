@@ -20,7 +20,7 @@ class ServicesController < ApplicationController
       flash[:success] = "Creado exitosamente."
       redirect_to services_url
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 

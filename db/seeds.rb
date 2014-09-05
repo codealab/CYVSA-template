@@ -106,6 +106,6 @@ end
 	date: rand(1980..2014),
 	image: '',
 	tipo: tipo
-
 	)
+  
 	end
