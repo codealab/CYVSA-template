@@ -133,7 +133,8 @@
 <table x="288" y="283" name="services">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="slide" row="service_id" />
+</row>
 <row name="icon" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
@@ -196,7 +197,7 @@
 <part>division_id</part>
 </key>
 </table>
-<table x="565" y="386" name="year">
+<table x="626" y="387" name="year">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -219,7 +220,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="440" y="361" name="map">
+<table x="484" y="360" name="map">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -262,7 +263,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="296" y="542" name="users">
+<table x="295" y="618" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -282,7 +283,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="498" y="604" name="notice">
+<table x="499" y="633" name="notice">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -297,6 +298,27 @@
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
+</key>
+</table>
+<table x="309" y="442" name="slide">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="title" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="text" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="image" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="service_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+<part>service_id</part>
 </key>
 </table>
 </sql>

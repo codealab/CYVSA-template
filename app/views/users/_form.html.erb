@@ -19,7 +19,10 @@
               <%= f.label :password, " Contraseña" %>
               <%= f.password_field :password, autocomplete: "off", :class => "form-control margin-bottom-20", placeholder:"Contraseña" %>
               <%= f.label :password_confirmation, "Confirmar contraseña" %>
-              <%= f.password_field :password_confirmation, :class => "form-control margin-bottom-20",placeholder:"Confirma contraseña"%></br></br>
+              <%= f.password_field :password_confirmation, :class => "form-control margin-bottom-20",placeholder:"Confirma contraseña"%>
+              <%= f.label :Administrador %>
+              <%= f.check_box :admin %> 
+              </br></br>
         <div class="col-lg-5 text-right">
         
         <% if params[:action] ==  "new" || params[:action] == "create"%>

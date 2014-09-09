@@ -1,9 +1,15 @@
-<% provide(:title,"Sign in") %>
-<div class="container content">
+<% provide(:title,"Iniciar seción") %>
+<div class="content_session content">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 reg-page">
+		<div >
+				 <a class="navbar-brand" href="/">
+                        
+                        <img id="logo-header" src="<%= logotipo %>" alt="Logo">
+                    </a>
+			</div>
 			<div class="reg-header">
-				<h2>Regístrate con tu cuenta</h2>
+				<h2>Inicia sesión con tu cuenta.</h2>
 			</div>
 			<%= form_for(:session, url: sessions_path) do |f| %>
 			<div class="input-group margin-bottom-20">

@@ -12,13 +12,15 @@
   <body class="header-fixed">
     <!--  <%= params %> <!--  <!--checo en que accion estoy-->
     
+  <% if params[:controller]!= "sessions" %>
     <% if current_user %>
-      <% if current_user.admin? %>
+      <% if current_user.admin? || current_user %>
       <%= render 'layouts/dashboard' %>
       <%end %>
     <% else %>
       <%= render 'layouts/header' %>
     <% end %>
+  <% end %>
 
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
@@ -28,14 +30,8 @@
 
 
 
-<% if params[:controller]!= "sessions" %>
-  <% if current_user %>
-    <% if !current_user.admin? %>
-       <%= render 'layouts/footer' %>
-    <%end %>
-    <% else %>
+<% if params[:controller]!= "sessions" && !current_user %>
     <%= render 'layouts/footer' %>
-  <% end %>
 <% end %>
 
 
