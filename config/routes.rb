@@ -1,4 +1,5 @@
 Template::Application.routes.draw do
+  resources :slides
   get "mailings/index"
   get "mailings/new"
   post "mailings/create"
@@ -10,7 +11,10 @@ Template::Application.routes.draw do
   root "static_pages#cyvsa_home"
   resources :homes
   resources :users
-  resources :services
+  
+  resources :services do 
+    resources :slides
+  end
   resources :sessions, only: [:new, :create, :destroy]
   get "project/index"
   get "portfolio/index"

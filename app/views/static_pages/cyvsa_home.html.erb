@@ -2,9 +2,9 @@
 <div class="slider-inner">
     <div id="da-slider" class="da-slider">
         <% @homes.each do |r| %>
-         <div class="da-slide">
-            <div class="col-md-3 col-md-offset-1">
-                <h2><i><%= r.slider_title_one   %></i> </h2>
+         <div class="da-slide ">
+            <div class="col-md-4 col-md-offset-1 slides-top">
+                <h2 class="slides-top-h2 position-left-h2"><i><%= r.slider_title_one   %></i> </h2>
             
                 <p><i><%= r.slider_text_one.to_s.html_safe %></i> </p>
             </div>
@@ -12,16 +12,16 @@
         </div>
         
          <div class="da-slide">
-            <div class="col-md-3 col-md-offset-1">
-                <h2><i><%= r.slider_title_two   %></i> </h2>
+            <div class="col-md-4 col-md-offset-1 slides-top">
+                <h2 class="slides-top-h2 position-left-h2"><i><%= r.slider_title_two   %></i> </h2>
             
                 <p><i><%= r.slider_text_two.to_s.html_safe %></i> </p>
             </div>
             <div class="da-img col-md-6 col-md-offset-2"><img class="img-responsive" src=" <%= photo(2) %> " alt="image01" /></div>
         </div>
         <div class="da-slide">
-            <div class="col-md-3 col-md-offset-1">
-                <h2><i><%= r.slider_title_three   %></i> </h2>
+            <div class="col-md-4 col-md-offset-1 slides-top">
+                <h2 class="slides-top-h2 position-left-h2"><i><%= r.slider_title_three   %></i> </h2>
             
                 <p><i><%= r.slider_text_three.to_s.html_safe %></i> </p>
             </div>

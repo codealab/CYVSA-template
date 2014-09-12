@@ -5,7 +5,8 @@
         <div class="panel-heading">
             <div class="pull-right">
               
-            <%= link_to "Nuevo", new_service_path, :class => 'btn btn-success btn-xs' %>
+            <%= link_to "Nuevo Servicio", new_service_path, :class => 'btn btn-success btn-xs' %>
+             
             </div>
             <h3 class="panel-title"><i class="fa fa-globe"></i> Servicios</h3>
         </div>
@@ -15,9 +16,9 @@
                     <tr>
                         
                         <th><%= model_class.human_attribute_name(:Icono) %></th>
-                        <th><%= model_class.human_attribute_name(:Titulo) %></th>
+                        <th class="col-sm-2"><%= model_class.human_attribute_name(:Titulo) %></th>
                         <th><%= model_class.human_attribute_name(:Comentario) %></th>
-                        <th><%= model_class.human_attribute_name(:Acciones) %></th>
+                        <th class="col-sm-2"><%= model_class.human_attribute_name(:Acciones) %></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,15 +27,16 @@
                     <tr>
                         
                         <td><i class="fa <%= "#{service.icon}"%> service-icon color-blue"></i></td>
-                        <td><%= service.title %></td>
-                        <td class="col-sm-8"><%= service.content.to_s.html_safe %></td>
+                        <td><%= link_to service.title, service_path(service), class: "no-color nounderline " %></td>
+                        <td ><%= service.content.to_s.html_safe %></td>
                         
                         <td>
                             
                             
                             <%= link_to "Editar", edit_service_path(service), :class => 'btn btn-warning btn-xs' %>
+                            
 
-                            <%= link_to "borrar", service_path(service),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
+                            <%= link_to "Borrar", service_path(service),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
                             
                         </td>
                     </tr>

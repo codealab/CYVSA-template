@@ -1,0 +1,51 @@
+<%- model_class = Slide-%>
+<div class="container content">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page">
+			<dl class="dl-horizontal">
+					
+				<%= form_for [ @service, @slide], :html => {:multipart => true, :class => 'form-horizontal'} do |f| %>
+			<%= render 'shared/error_messages', object: f.object %>
+			<dl class="dl-horizontal">
+				<dt><strong><%= model_class.human_attribute_name(:Imagen) %>:</strong></dt>
+				<dd><%= image_tag @slide.image_url(:thumb).to_s, id: "image_url" %></dd></br>
+
+				
+				<div class="button">
+					<div class="text">
+						Selecciona una imagen
+					</div>
+					<%= f.file_field :image, data: {image: "image_url"}, class: "input_pluguin"  %>
+				</div>
+			</dl></dd></br>
+			<div class="reg-header">
+			</div>
+			
+			<div class="control-group">
+				<%= f.label :Titlulo, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_field :title, :class => 'text_field' %>
+				</div>
+			</div>
+			<div class="control-group">
+				<%= f.label :Descripcion, :class => 'control-label' %>
+				<div class="controls">
+					<%= f.text_area :text, :class => 'wysihtml5' %>
+				</div>
+			</div>
+			</br></br>
+			
+			<% if params[:action] == "new" %>
+			<div class="col-lg-3 text-right">
+				<%= f.submit "Crear", class: "btn btn-primary" %>
+			</div>
+			<% else %>
+			<div class="col-lg-3 text-right">
+				<%= f.submit "Guardar", class: "btn btn-primary" %>
+			</div>
+			<% end %>
+			<%= link_to "Cancelar", dashboard_path, class: 'btn btn-danger'%>
+			<% end %>
+		</div>
+	</div>
+</div>

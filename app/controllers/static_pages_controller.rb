@@ -1,9 +1,11 @@
 class StaticPagesController < ApplicationController
 	skip_before_action :require_login, only: [:cyvsa_home, :recognition]
   def cyvsa_home
-  	@homes = Home.all
+  	@homes    = Home.all
     @projects = Project.order("id DESC")
-    @mailing = MailingForm.new
+    @mailing  = MailingForm.new
+    @services = Service.all
+    
    
 	end
 

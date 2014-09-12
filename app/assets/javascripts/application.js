@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-migrate-min
 //= require jquery_ujs
 //= require bootstrap-wysihtml5
 //= require bootstrap

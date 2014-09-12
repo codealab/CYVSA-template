@@ -7,11 +7,14 @@ class ServicesController < ApplicationController
 
   def show
     @service = Service.find(params[:id])
+    @slides = @service.slides
+
 
   end
 
   def new
     @service = Service.new
+
   end
 
   def create
@@ -45,12 +48,13 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
     @service.destroy
     flash[:success] = "Borrado exitosamente."
-    redirect_to @service
+    redirect_to services_url
+
   end
 
   private
   def service_params
-    params.require(:service).permit(:icon, :title, :content)
+    params.require(:service).permit(:icon, :title, :content, :image_slide, :title_slide, :text_slide)
 
   end
 
