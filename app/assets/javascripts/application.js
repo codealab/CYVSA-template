@@ -173,8 +173,10 @@ var App = function() {
 
             $('.wysihtml5').wysihtml5();
 
-        },
+           
 
+        },
+     
 
         initSliders: function() {
             jQuery('#clients-flexslider').flexslider({
@@ -330,5 +332,8 @@ $(document).ready(function($) {
     $(document).on('page:load', function() {
         window['rangy'].initialized = false
     });
+
+
+   
 
 });

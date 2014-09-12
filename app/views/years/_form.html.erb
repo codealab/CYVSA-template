@@ -22,14 +22,14 @@
 			<div class="control-group">
 				<%= f.label :Titlulo, :class => 'control-label' %>
 				<div class="controls">
-					<%= f.text_field :title, :class => 'text_field' %>
+					<%= f.text_field :title, :class => 'text_field', placeholder: 'Escribe un título' %>
 				</div>
 			</div>
 			<% if params[:tipo] || @year.tipo == "Historia" %>
 			<div class="control-group">
 				<%= f.label :Descripcion, :class => 'control-label' %>
 				<div class="controls">
-					<%= f.text_area :text, :class => 'wysihtml5' %>
+					<%= f.text_area :text, :class => 'wysihtml5', placeholder: 'Escribe una Descripción' %>
 				</div>
 			</div>
 			
@@ -37,7 +37,7 @@
 			<div class="control-group">
 				<%= f.label :Fecha, :class => 'control-label' %>
 				<div class="controls">
-					<%= f.text_field :date, :class => 'text_field' %>
+					<%= f.text_field :date, :class => 'text_field', placeholder: 'Escribe una fecha' %>
 				</div>
 				<div class="control-group">
 					

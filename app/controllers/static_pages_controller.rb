@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
     @mailing  = MailingForm.new
     @services = Service.all
     
+    
    
 	end
 
