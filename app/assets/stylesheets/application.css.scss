@@ -19,8 +19,8 @@
 /*Import Google Font*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
-/*boton agregar archivos*/
 
+/* arreglando titulo de slide y texto de abajo esto esta en cyvsa_home.html.erb*/
 .slides-top {
     position: relative;
     top: 100px;
@@ -29,16 +29,21 @@
     position: relative!important;
     
 }
+
 .position-left-h2 {
     margin-left: 1%!important; 
+
 }
 
+/*--------end-----------*/
+
+/*.....esto es en home se acomodo el margen del titulo de informativo*/
 .margin-left-h2{
     margin-left: -13px!important; 
 
 }
 
-
+/*boton agregar archivos*/
 
 .button input {
     opacity: 0;
