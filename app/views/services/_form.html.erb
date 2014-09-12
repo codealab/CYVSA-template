@@ -1,9 +1,11 @@
 #encoding: utf-8
+<%- model_class = Slide -%>
 <div class="container content">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 reg-page">
-      <%= form_for @service, :html => { :class => 'form-horizontal' } do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+
+<%= form_for @service, :html => {:multipart => true, :class => 'form-horizontal'} do |f| %>
+      
       <div class="panel panel-sea margin-bottom-40">
         <div class="panel-heading">
           <h3 class="panel-title"> Icono</h3>

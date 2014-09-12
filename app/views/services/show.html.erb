@@ -1,0 +1,49 @@
+#encoding: utf-8
+<%- model_class = Slide -%>
+<div class="container content">
+    <div class="panel panel-grey margin-bottom-40">
+        <div class="panel-heading">
+            <div class="pull-right">
+              
+           
+             <%= link_to "Crear slide", new_service_slide_path(@service), :class => 'btn btn-success btn-xs' %>
+            </div>
+            <h3 class="panel-title"><i class="fa fa-globe"></i> Slide</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        
+                        <th><%= model_class.human_attribute_name(:Imagen) %></th>
+                        <th class="col-sm-2"><%= model_class.human_attribute_name(:Titulo) %></th>
+                        <th class="col-sm-2"><%= model_class.human_attribute_name(:Comentario) %></th>
+                        <th class="col-sm-2"><%= model_class.human_attribute_name(:Acciones) %></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <% @slides.each do |slide| %>
+                    <tr>
+                       
+                        <td> <%=  image_tag slide.image_url(:thumb).to_s%></td>
+                        <td><%= slide.title %></td>
+                        <td class="col-sm-7"><%= slide.text.to_s.html_safe %></td>
+                        
+                        <td>
+                            
+                            
+                            <%= link_to "Editar", edit_slide_path(slide), :class => 'btn btn-warning btn-xs' %>
+                            
+
+                            <%= link_to "Borrar", slide_path(slide),:class => 'btn btn-danger btn-xs', method: :delete, data: {confirm: "¿Está usted seguro que quiere borrar este servicio?"}%>
+                            
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>

@@ -19,6 +19,21 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
 /*boton agregar archivos*/
+
+.slides-top {
+    position: relative;
+    top: 100px;
+}
+.slides-top-h2 {
+    position: relative!important;
+    
+}
+.position-left-h2 {
+    margin-left: 1%!important; 
+}
+
+
+
 .button input {
     opacity: 0;
 }

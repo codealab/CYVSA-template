@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+gem 'jquery-migrate-rails'
 gem 'rails', '4.0.0'	
 gem 'pg'
 gem 'carrierwave', '~> 0.10.0'

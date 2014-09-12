@@ -4,7 +4,6 @@ class CreateServices < ActiveRecord::Migration
       t.string :icon
       t.string :title
       t.text :content
-
       t.timestamps
     end
   end
