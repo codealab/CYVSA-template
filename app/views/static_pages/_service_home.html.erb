@@ -2,11 +2,12 @@
 <div class="container content">
 <div class="headline"><h2>Que Hacemos</h2></div>
     <div class="row margin-bottom-30">
-        <% @services.all.each do |service| %>
+        <% @services.all.each_with_index do |service, index| %>
                
                 <% service.slides.each do |slide| %>
               <a class="thumbnail fancybox-button zoomer no-color nounderline" 
-              data-rel="fancybox-button"   title = "<h3><%= slide.title%></h3> <%= slide.text%>"   href="<%= slide.image %>">
+            data-rel="fancybox-button_<%= index %>"  
+             title = "<h3><%= slide.title%></h3> <%= slide.text%>"   href="<%= slide.image %>">
         <% end %>
                  
         <div class="col-sm-4 ">

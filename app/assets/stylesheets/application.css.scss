@@ -8,8 +8,9 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap-wysihtml5           
+           
  *= require_self
+ *= require bootstrap-wysihtml5 
  *= require_tree .
  */
 
@@ -30,6 +31,11 @@
 }
 .position-left-h2 {
     margin-left: 1%!important; 
+}
+
+.margin-left-h2{
+    margin-left: -13px!important; 
+
 }
 
 
