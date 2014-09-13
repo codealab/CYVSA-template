@@ -19,6 +19,6 @@ ul.wysihtml5-toolbar li a[title="Indent"] { display: none; }
 ul.wysihtml5-toolbar li a[title="Ordered list"] { display: none; }
 ul.wysihtml5-toolbar li a[title="Outdent"] { display: none; }
 ul.wysihtml5-toolbar li a[title="CTRL+S"] { display: none; }
-ul.wysihtml5-toolbar li a[data-wysihtml5-command="formatBlock"] { display: none; }
+#ul.wysihtml5-toolbar li a[data-wysihtml5-command="formatBlock"] { display: none; }
 
 #ul.wysihtml5-toolbar li.dropdown { display:none; }
